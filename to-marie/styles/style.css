@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+.snap {
+    scroll-snap-align: start;
+}
+
+body {
+    height: 100vh;
+    color: white;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Simula background-attachment: fixed para iOS */
+body::before {
+    content: '';
+    position: fixed; /* Fixa o pseudo-elemento na viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, #ff7d8ebe, #ff7d8e8e), url(../assets/background.png);
+    background-position: center;
+    background-size: 100vh; /* Mantém o tamanho original */
+    z-index: -10; /* Garante que fique atrás do conteúdo */
+}
+
+.page {
+    box-sizing: border-box;
+    padding: 3vh;
+    height: 100vh;
+
+    div {
+
+        background-color: rgba(255, 255, 255, 0.226);
+        box-sizing: border-box;
+        padding: 3vh;
+        outline: 2px solid #ffffff; /* Contorno branco sólido com 2px de espessura */
+        height: 100%;
+        width: 100%;
+
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .container {
+        width: 30%;
+    }
+}
+
+.mosaico {
+    box-sizing: border-box;
+    padding: 3vh;
+    height: 100%;
+
+    img {
+        outline: 2px solid #ffffff; /* Contorno branco sólido com 2px de espessura */
+        width: 100%;
+        border-radius: 2vh;
+    }
+
+    section {
+        
+        border-radius: 3vh;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.226);
+        box-sizing: border-box;
+        padding: 3vh;
+        outline: 2px solid #ffffff; /* Contorno branco sólido com 2px de espessura */
+        height: 100%;
+        width: 100%;
+
+        div {
+            text-align: start;
+        }
+    }
+}

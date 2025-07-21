@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presente 💖</title>
+    <link rel="shortcut icon" href="assets/fvicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Lobster&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+
+            height: 90vh;
+            gap: 5vh;
+            color: white;
+            font-weight: 100;
+            font-style: normal;
+
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        button {
+            transition: 0.1s;
+            cursor: pointer;
+            border-radius: 10px;
+            color: white;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.253);
+            padding: 1vh;
+            font-size: 5vh;
+        }
+
+        span {
+            font-size: 40vw;
+            text-shadow: 0 0 2vw #ffffff, 0 0 1vw #ffffff;
+        }
+
+        img {
+            width: 50%;
+            filter: drop-shadow(0 0 5vw #ffabc4);
+        }
+
+        h1 {
+            width: 80%;
+            text-align: center;
+        }
+
+        button:hover {
+            transition: 0.3s;
+            transform: scale(1.1);
+        }
+
+        button:active {
+            background-color: rgba(255, 255, 255, 0.649);
+        }
+
+        #gift-box {
+            width: 150px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        #gift-box:hover {
+            transform: scale(1.1);
+        }
+
+        .gift-pop {
+            animation: gift-pop-animation 0.4s ease-out;
+        }
+
+        @keyframes gift-pop-animation {
+            0% {
+                transform: scale(1.1);
+                /* Começa um pouco maior por causa do hover */
+            }
+
+            50% {
+                transform: scale(1.25) translateY(-15px);
+                /* Pula e aumenta de tamanho */
+            }
+
+            100% {
+                transform: scale(1.1);
+                /* Volta ao estado do hover */
+            }
+        }
+
+        .particle {
+            position: absolute;
+            background-color: #ffffff;
+            /* Cor de brilho/estrela */
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10;
+            animation: fly-out 0.7s ease-out forwards; 
+            z-index: 101; /* Garante que as partículas fiquem sobre o flash */
+        }
+
+        @keyframes fly-out {
+            from {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            to {
+                opacity: 0;
+                transform: scale(0) translate(var(--x), var(--y));
+            }
+        }
+
+        .fade-out {
+            animation: fadeOut 1s forwards;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        .screen-flash {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 100; /* Acima de tudo, exceto as partículas */
+            pointer-events: none;
+            animation: flash-animation 0.4s ease-out;
+        }
+
+        @keyframes flash-animation {
+            0% { opacity: 0; }
+            50% { opacity: 0.25; } /* Pico do brilho */
+            100% { opacity: 0; }
+            }
+        }
+    </style>
+</head>
+
+<body class="flex">
+    <!-- DIV PARA EMOJIS FUNCIONAREM SEMPRE -->
+    <div id="emoji-container"></div>
+    <!--  -->
+    <img src="assets/heart.png" alt="Presente em forma de coração" id="gift-box">
+    <h1>Comemoração do nosso 1º ano de namoro!</h1>
+    <p style="margin-top: 2vh;" id="click-counter">clique no coração!</p>
+    <script>
+        function createEmoji() {
+            const emoji = document.createElement('div');
+            emoji.classList.add('emoji');
+            emoji.innerText = '💗';
+
+            const container = document.getElementById('emoji-container');
+            container.appendChild(emoji);
+
+            const size = Math.random() * 40 + 20;
+            emoji.style.left = Math.random() * window.innerWidth + 'px';
+            emoji.style.fontSize = size + 'px';
+            emoji.style.animationDuration = Math.random() * 5 + 2 + 's';
+
+            setTimeout(() => emoji.remove(), 10000);
+        }
+        setInterval(createEmoji, 300);
+
+        const gift = document.getElementById('gift-box');
+        const counterText = document.getElementById('click-counter');
+        let clickCount = 0;
+        const clicksNeeded = 3;
+
+        function createParticles() {
+            const giftBox = gift.getBoundingClientRect();
+            const centerX = giftBox.left + giftBox.width / 2;
+            const centerY = giftBox.top + giftBox.height / 2;
+
+            for (let i = 0; i < 20; i++) { // Cria 20 partículas
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                document.body.appendChild(particle);
+
+                const size = Math.random() * 8 + 4; // Tamanho da partícula: 4px a 12px
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${centerX}px`;
+                particle.style.top = `${centerY}px`;
+
+                // Direção e distância aleatórias para a partícula
+                const angle = Math.random() * 360;
+                const distance = Math.random() * 80 + 50;
+                const x = Math.cos(angle * (Math.PI / 180)) * distance;
+                const y = Math.sin(angle * (Math.PI / 180)) * distance;
+
+                particle.style.setProperty('--x', `${x}px`);
+                particle.style.setProperty('--y', `${y}px`);
+
+                // Remove a partícula após a animação
+                setTimeout(() => {
+                    particle.remove();
+                }, 700); // Mesma duração da animação fly-out
+            }
+        }
+
+        gift.addEventListener('click', (event) => {
+            if (clickCount >= clicksNeeded) {
+                return; // Impede mais cliques durante a transição
+            }
+
+            clickCount++;
+            const clicksRemaining = clicksNeeded - clickCount;
+
+            // Força o reinício da animação
+            gift.classList.remove('gift-pop');
+            void gift.offsetWidth;
+            gift.classList.add('gift-pop');
+
+            createParticles();
+
+            // Adiciona o efeito de flash na tela
+            const flash = document.createElement('div');
+            flash.classList.add('screen-flash');
+            document.body.appendChild(flash);
+            setTimeout(() => flash.remove(), 400); // Remove o flash após a animação
+
+            if (clicksRemaining > 0) {
+                counterText.textContent = `Mais ${clicksRemaining} clique${clicksRemaining > 1 ? 's' : ''}!`;
+            } else {
+                counterText.textContent = 'Abrindo o presente...';
+            }
+            counterText.style.opacity = '1';
+
+            if (clickCount >= clicksNeeded) {
+                setTimeout(() => { // Espera a animação de clique terminar
+                    document.body.classList.add('fade-out');
+                }, 500);
+                setTimeout(() => { // Redireciona durante o fade-out
+                    window.location.href = 'home/';
+                }, 1000); // Duração do fade-out é 1s
+            }
+        });
+
+        gift.addEventListener('animationend', () => {
+            gift.classList.remove('gift-pop');
+        });
+    </script>
+</body>
+
+</html>

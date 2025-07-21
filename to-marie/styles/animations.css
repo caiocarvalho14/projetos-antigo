@@ -1,0 +1,107 @@
+.emoji {
+    position: absolute;
+    top: -1vh;
+    animation: fall linear infinite;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+#batimento {
+    animation: batimento 2s infinite;
+    transform-origin: center;
+    display: inline-block;
+}
+
+@keyframes batimento {
+    0% {
+        transform: scale(1);
+    }
+
+    14% {
+        transform: scale(1.3);
+    }
+
+    28% {
+        transform: scale(1);
+    }
+
+    42% {
+        transform: scale(1.2);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* CSS PARA CHUVA DE EMOJIS */
+#emoji-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+    filter: blur(1.5px);
+    /* fica atrás de todo o conteúdo */
+}
+
+.emoji {
+    position: absolute;
+    top: -5vh;
+    animation: fall linear infinite;
+    opacity: 0.8;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ANIMACAO PARA BOLO */
+/* TYPERWRITER */
+.typer{
+
+    font-size: 12vw;
+}
+.typer::after {
+  content: '|'; /* A barrinha */
+  margin-left: 0;
+  animation: piscar 0.7s infinite step-end;
+  color: rgb(255, 255, 255); /* ou a cor que combinar com seu design */
+  text-shadow: 0 0 2vh #ffffff;
+}
+
+@keyframes piscar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+/* ../styles/style.css ou ../styles/styles.css */
+
+#mosaico-timeline-container {
+  position: fixed; /* Mantém a barra fixa na tela durante o scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5vh; /* Altura da barra de progresso */
+  background-color: rgba(221, 221, 221, 0.438); /* Cor de fundo do contêiner (trilha) */
+  z-index: 1000; /* Garante que fique por cima de outros elementos */
+  display: none; /* Começa escondida, será mostrada via JS */
+}
+
+#mosaico-timeline-bar {
+  height: 100%;
+  width: 0%; /* Começa com largura 0% */
+  background-color: #ffffff; /* Cor da barra de progresso (um rosa, por exemplo) */
+  transition: width 0.1s linear; /* Transição suave ao atualizar a largura */
+}
