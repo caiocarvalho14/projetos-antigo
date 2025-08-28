@@ -10,13 +10,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-        
-        
-        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-        
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-        <link rel="stylesheet" href="/static/css/main.css">
+
+
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
 </head>
 
 <body>
@@ -121,6 +121,30 @@
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
 <script>
+    // Seleciona o botão principal que controla o menu (o "hambúrguer")
+    const toggleButton = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+
+    // Seleciona o próprio menu, para podermos verificar sua visibilidade de outra forma se necessário
+    const navbar = document.getElementById('navbar-sticky');
+
+    // Seleciona TODOS os links dentro do menu de navegação
+    const navLinks = navbar.querySelectorAll('a');
+
+    // Itera sobre cada link para adicionar um "ouvinte" de clique
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // AQUI ESTÁ A LÓGICA PRINCIPAL
+            // Verificamos se o menu está aberto. A forma mais confiável é checar o atributo 'aria-expanded' do botão.
+            // Outra forma é verificar se o menu NÃO está com a classe 'hidden' que o esconde.
+            const isMenuOpen = toggleButton.getAttribute('aria-expanded') === 'true';
+
+            // Se (e somente se) o menu estiver aberto, simula um clique no botão para fechá-lo.
+            if (isMenuOpen) {
+                toggleButton.click();
+            }
+        });
+    });
+    // 
     const elementoNome = document.querySelector('#nome');
     const textoParaEscrever = " Caio Carvalho.";
 
