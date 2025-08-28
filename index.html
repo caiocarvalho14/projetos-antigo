@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caio Carvalho - Desenvolvedor Full-Stack</title>
+    <link rel="shortcut icon" href="/assets/favicon.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/main.css">
-
-
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        
+        
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="/static/css/main.css">
 </head>
 
 <body>
@@ -84,7 +85,26 @@
     </div>
 
     <div class="page" id="sobre">
-        <h1>sobre</h1>
+        <h1 class="title">Sobre Mim</h1>
+        <div class="about">
+            <img class="img" src="/assets/me.png" alt="">
+            <div>
+                <h1>Olá, sou<span id="nome"></span></h1>
+                <p>um desenvolvedor full-stack em formação pelo curso Técnico em Informática para Internet do SENAI.
+                    Minha paixão é usar a tecnologia para resolver problemas e construir soluções web completas, o que
+                    me motiva a estar sempre aprendendo. Atualmente, dedico meu foco ao EstágioS, um projeto de larga
+                    escala para o gerenciamento de estágios, onde tenho a oportunidade de aplicar na prática meus
+                    conhecimentos em front-end, back-end e banco de dados.</p>
+                <p>Como desenvolvedor, acredito que a qualidade de uma aplicação nasce de uma base sólida e bem
+                    planejada. Por isso, sou um grande defensor das melhores práticas de desenvolvimento, utilizando
+                    modelagem UML para garantir uma arquitetura robusta e priorizando sempre um código limpo, organizado
+                    e escalável. Meu compromisso é estar sempre atualizado com as tecnologias mais modernas, buscando
+                    entregar projetos que não sejam apenas funcionais, mas também eficientes e fáceis de manter.</p>
+            </div>
+        </div>
+        <button>
+
+        </button>
     </div>
     <div class="page" id="habilidades">
         <h1>habilidades</h1>
@@ -101,6 +121,41 @@
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
 <script>
+    const elementoNome = document.querySelector('#nome');
+    const textoParaEscrever = " Caio Carvalho.";
+
+    // --- VARIÁVEIS DE CONTROLE DE VELOCIDADE ---
+    const velocidadeEscrita = 50; // Em milissegundos (ms). Quanto MAIOR, mais LENTA a escrita.
+    const velocidadeApagar = 90; // Em milissegundos (ms). Quanto MAIOR, mais LENTO ao apagar.
+    const tempoEspera = 2000;      // Em milissegundos (ms). Tempo que o texto fica visível antes de apagar.
+
+    function typeWriter(texto, i) {
+        if (i < texto.length) {
+            elementoNome.innerHTML += texto.charAt(i);
+            i++;
+            setTimeout(() => typeWriter(texto, i), velocidadeEscrita);
+        } else {
+            // Quando terminar de escrever, espera um pouco e chama a função para apagar
+            setTimeout(eraseWriter, tempoEspera);
+        }
+    }
+
+    function eraseWriter() {
+        let textoAtual = elementoNome.innerHTML;
+        if (textoAtual.length > 0) {
+            elementoNome.innerHTML = textoAtual.slice(0, -1);
+            setTimeout(eraseWriter, velocidadeApagar);
+        } else {
+            // Quando terminar de apagar, reinicia o ciclo
+            setTimeout(() => typeWriter(textoParaEscrever, 0), 500); // Pequeno delay antes de recomeçar
+        }
+    }
+
+    // Inicia o ciclo pela primeira vez
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => typeWriter(textoParaEscrever, 0), 500);
+    });
+
     const btnTopo = document.getElementById('btnTopo');
 
     window.addEventListener('scroll', () => {

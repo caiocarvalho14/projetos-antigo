@@ -5,7 +5,7 @@
 }
 
 * {
-
+    color: white;
     font-family: poppins;
 }
 
@@ -13,6 +13,12 @@ body {
     height: 100vh;
     background: var(--gradient-blue-dark);
     background-attachment: fixed;
+}
+
+.title {
+    color: white;
+    padding: 4vh 0;
+    font-size: 4vh;
 }
 
 nav {
@@ -24,7 +30,8 @@ nav {
         border-radius: 1vh;
         cursor: pointer;
     }
-    li:hover{
+
+    li:hover {
         background-color: var(--light-blue);
     }
 }
@@ -142,6 +149,7 @@ div {
                 padding: 1vh;
                 line-height: 2.5vh;
             }
+
         }
 
         .hero2 {
@@ -167,7 +175,7 @@ div {
             }
 
             a {
-                font-size: 5vh;
+                font-size: 4vh;
                 line-height: 0vh;
             }
         }
@@ -177,3 +185,115 @@ div {
 }
 
 /* ABOUT */
+
+#nome {
+    font-weight: bold;
+    border-right: 5px solid red;
+    /* Simula o cursor */
+    padding-right: 5px;
+    animation: blink-caret .75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Animação do cursor piscando */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--light-blue);
+    }
+}
+
+#sobre {
+    text-align: center;
+
+    .about {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 5vw;
+
+        div {
+            width: 30%;
+
+            h1 {
+                text-align: start;
+                font-weight: bold;
+                font-size: 2vw;
+            }
+        }
+    }
+
+    p {
+        text-align: justify;
+        padding: 1vh 0;
+        font-size: 2vh;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .img {
+            width: 60%;
+        }
+    #nome {
+        font-weight: bold;
+        border-right: 5px solid red;
+        /* Simula o cursor */
+        padding-right: 5px;
+        animation: blink-caret .75s step-end infinite;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    /* Animação do cursor piscando */
+    @keyframes blink-caret {
+
+        from,
+        to {
+            border-color: transparent
+        }
+
+        50% {
+            border-color: var(--light-blue);
+        }
+    }
+
+    #sobre {
+        text-align: center;
+
+        .about {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 5vw;
+
+            div {
+
+                width: 80%;
+
+                h1 {
+                    text-align: start;
+                    font-weight: bold;
+                    font-size: 5vw;
+                }
+            }
+
+
+        }
+
+        
+
+        p {
+            text-align: justify;
+            padding: 1vh 0;
+            font-size: 1.3vh;
+        }
+    }
+}
