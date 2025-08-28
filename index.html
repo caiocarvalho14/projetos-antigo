@@ -1,239 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="aCcKJ-uLMKifAxehBhSDuzhecHQLKzgu12hRAsLaU10" />
-    <title>Caio Carvalho - Dev</title>
-    <meta name="description" content="Portfólio de Caio Carvalho, desenvolvedor web especializado em front-end e back-end.">
-    <link rel="stylesheet" href="/style/mobile.css">
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="shortcut icon" href="/assets/favicon.svg" type="image/x-icon">
-    <!-- W3S -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Caio Carvalho - Desenvolvedor Full-Stack</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
-    <script>
-        window.addEventListener("load", () => {
-            gsap.from(".animate-gsap", {
-                y: 100,
-                opacity: 0,
-                duration: 3,
-                ease: "power2.out",
-                stagger: 0.3
-            });
-        });
-        window.addEventListener("load", () => {
-            gsap.from(".animate-img", {
-                y: 100,
-                opacity: 0,
-                duration: 3,
-                ease: "power2.out",
-                stagger: 0.3
-            });
-        });
-    </script>
-    <div class="container">
-        <div id="section-1" class="scroll-snap ">
-            <nav class="animate-gsap">
-                <img src="/assets/topSVG.svg" alt="">
-                <div class="nav-links">
-                    <h1 id="about-link">Sobre</h1>
-                    <h1 id="habi-link">Habilidades</h1>
-                    <h1 id="projeto-link">Projetos</h1>
-                    <h1 id="contato-link">Contato</h1>
+
+
+    <div class="page">
+        <nav class="">
+            <div class="max-w-screen-xl nav flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="https://caiocarvalho.dev.br" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="/assets/topSVG.svg" class="h-16" alt="Flowbite Logo">
+                </a>
+                <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <a href="#contato"><button type="button"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Contato</button></a>
+                    <button data-collapse-toggle="navbar-sticky" type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="navbar-sticky" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
                 </div>
-            </nav>
-            <section>
-                <img src="/assets/home-selfie.png" class="animate-img" alt="">
-                <div class="section1-text animate-gsap">
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                    <ul
+                        class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                        <li>
+                            <a href="#sobre"
+                                class="">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="#habilidades"
+                                class="">Habilidades</a>
+                        </li>
+                        <li>
+                            <a href="#projetos"
+                                class="">Projetos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <div class="hero1">
+                <h1>BEM VINDO AO MEU <span>PORTFÓLIO!</span></h1>
+                <p>Abaixo você encontrará uma seleção dos meus melhores projetos, as tecnologias que domino e um pouco
+                    sobre
+                    minha trajetória como desenvolvedor.</p>
+            </div>
+            <div class="hero2">
+                <img src="/assets/home-selfie.png" alt="">
+                <div class="hero3">
                     <h1>Caio Carvalho</h1>
-                    <p>Desenvolvedor Front-End</p>
+                    <p>Desenvolvedor Full-Stack</p>
                     <a href="https://www.linkedin.com/in/caio-carvalho-326269358//" target="_blank"><i
-                            class='fab fa-linkedin'></i></a>
-                    <a href="https://github.com/caiocarvalho14" target="_blank"><i class='fab fa-github'></i></a>
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/caiocarvalho14" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:caioscphb@gmail.com"><i class="fas fa-envelope" id="email"></i></a>
                     <a href="https://www.instagram.com/caio.carvalho9/" target="_blank"><i
-                            class='fab fa-instagram'></i></a>
-                    <a href="http://wa.me//86995633313" target="_blank"><i class='fab fa-whatsapp'></i></a>
-                    <a href="mailto:caioscphb@gmail.com"><i class='fas fa-envelope' id="email"></i></a>
-                </div>
-            </section>
-        </div>
-        <!-- about me -->
-        <h1 class="title scroll scroll-snap" id="about">Sobre mim</h1>
-        <div id="section-2" class="item-width scroll">
-            <img src="/assets/about1.png" alt="">
-            <nav class="item bandeja" id="about-item">
-                <h1>OLÁ, EU SOU O</h1>
-                <h2 class="typewriter"><span id="typed-text"></span><span class="cursor">|</span></h2>
-                <p>Tenho 17 anos e estou começando minha jornada na programação. Atualmente, faço o curso técnico de
-                    Informática para Internet no SENAI, onde aprendo a criar sites e aplicações do zero. Sou apaixonado
-                    por tecnologia, gosto de me desafiar com novos conceitos e estou sempre buscando evoluir.<br>Fora da
-                    programação, adoro ler para expandir minha criatividade e visão de mundo. Estou animado para crescer
-                    como desenvolvedor e aberto a trocar ideias sobre tecnologia!</p>
-                <div id="about-links">
-                    <section>
-                        <a href="https://www.linkedin.com/in/caio-carvalho-326269358/" target="_blank"><i
-                                class='fab fa-linkedin'></i></a>
-                        <a href="https://github.com/caiocarvalho14" target="_blank"><i class='fab fa-github'></i></a>
-                        <a href="https://www.instagram.com/caio.carvalho9/" target="_blank"><i
-                                class='fab fa-instagram'></i></a>
-                        <a href="http://wa.me//86995633313" target="_blank"><i class='fab fa-whatsapp'></i></a>
-                        <a href="mailto:caioscphb@gmail.com"><i class='fas fa-envelope' id="email"></i></a>
-                    </section>
-                    <a href="/assets/currículo-caio-carvalho.pdf" target="_blank"><button><i class="fa-solid fa-download"></i> Ver Currículo</button></a>
-                </div>
-            </nav>
-        </div>
-        <h1 class="title scroll scroll-snap" id="habilities">Habilidades</h1>
-        <div id="section-2" class="item-width scroll">
-            <div class="cards">
-                <div class="card bandeja">
-                    <img src="/assets/H-card1.png" alt="">
-                    <div class="card-text">
-                        <h1>Dev Front-End</h1>
-                        <p>Desenvolvimento de websites responsivos com amplo conhecimento de HTML5, CSS3 e JavaScript.
-                        </p>
-                    </div>
-                </div>
-                <div class="card bandeja">
-                    <img src="/assets/git-github.svg" alt="">
-                    <div class="card-text">
-                        <h1>Controle de Versão</h1>
-                        <p>Gerenciamento de projetos e colaboração em equipe usando Git e GitHub, com domínio em
-                            versionamento de código e workflows de repositórios.
-                        </p>
-                    </div>
-                </div>
-                <div class="card bandeja">
-                    <img src="/assets/figmapng.png" alt="">
-                    <div class="card-text">
-                        <h1>Design de Interfaces</h1>
-                        <p>Criação de protótipos e layouts responsivos utilizando o Figma, com foco em experiências de
-                            usuário modernas e intuitivas.
-                        </p>
-                    </div>
+                            class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
-        <div id="projetos">
-            <h1 class="title scroll scroll-snap">Projetos</h1>
-            <div class="projetos item-width scroll" id="section-4">
-                <a href="https://caiocarvalho14.github.io/MERCANTIL-NICOLAU/" target="_blank">
-                    <div class="projeto" id="projeto1" title="Clique para acessar">
-                        <div class="overlay">Website Empresarial<br>Mercantil Nicolau Filho<br></div>
-                    </div>
-                </a>
-                <a href="https://caiocarvalho14.github.io/EMPRESA-X/" target="_blank">
-                    <div class="projeto" id="projeto2" title="Clique para acessar">
-                        <div class="overlay">Projeto de aprendizado Empresa X</div>
-                    </div>
-                </a>
-                <a href="https://caiocarvalho14.github.io/CARDAPIO-LOVSOSWEET/" target="_blank">
-                    <div class="projeto" id="projeto3" title="Clique para acessar">
-                        <div class="overlay">Loja Virtual</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="setup scroll" id="projetos">
-            <h1 class="title scroll-snap scroll">Meu Setup</h1>
-            <div class="item scroll bandeja"><img src="/assets/setupimg.jpg" alt=""></div>
-        </div>
-        <h1 class="title scroll scroll-snap" id="contato">Contato</h1>
-        <div id="contato" class="scroll">
-            <div class="contato-links scroll">
-                <a class="bandeja" href="https://www.linkedin.com/in/caio-carvalho-326269358/" id="link"
-                    target="_blank">
-                    <i class='fab fa-linkedin'></i>
-                    <div class="text">
-                        <h1>Linkedin</h1>
-                    </div>
-                </a>
-                <a class="bandeja" href="https://github.com/caiocarvalho14" id="git" target="_blank"><i
-                        class='fab fa-github'></i>
-                    <div class="text">
-                        <h1>Github</h1>
-                        <p>@caiocarvalho14</p>
-                    </div>
-                </a>
-                <a class="bandeja" href="https://www.instagram.com/caio.carvalho9/" id="insta" target="_blank"><i
-                        class='fab fa-instagram'></i>
-                    <div class="text">
-                        <h1>Instagram</h1>
-                        <p>@caio.carvalho9</p>
-                    </div>
-                </a>
-                <a class="bandeja" href="http://wa.me//86995633313" id="wpp" target="_blank"><i
-                        class='fab fa-whatsapp'></i>
-                    <div class="text">
-                        <h1>Whatsapp</h1>
-                        <p>(86) 9 9563 - 3313</p>
-                    </div>
-                </a>
-                <a class="bandeja" href="mailto:caioscphb@gmail.com" target="_blank"><i class='fas fa-envelope'
-                        id="email">
-                    </i>
-                    <div class="text">
-                        <h1>Envie um E-mail</h1>
-                        <p>caioscphb@gmail.com</p>
-                    </div>
-                </a>
-            </div>
-            <h1>OU</h1>
-            <div class="form scroll">
-                <h1>Envie uma mensagem:</h1>
-                <form action="https://formsubmit.co/caioscphb@gmail.com" method="POST">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://caiocarvalho.dev.br/formsubmited">
-                    <input type="text" name="NOME" id="name-form" required placeholder="Insira seu nome:">
-                    <input type="email" name="EMAIL" id="email-form" required placeholder="Insira seu email:">
-                    <textarea placeholder="Sua mensagem" id="area-form" class="form-control" name="MENSAGEM" rows="10"
-                        required></textarea>
-                    <button type="submit">Enviar Mensagem</button>
-                </form>
-            </div>
-        </div>
-
-        <footer>
-            <h1>projetado e desenvolvido por Caio Carvalho. <br><a
-                    href="caiocarvalho.dev.br">www.caiocarvalho.dev.br</a><br>2025</h1>
-        </footer>
-        <button id="btnTopo"><i class='fas fa-angle-up'></i></button>
     </div>
-    <script src="/script/script.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script>
-        ScrollReveal().reveal('.scroll', {
-            distance: '10px',
-            duration: 1000,
-            easing: 'ease-out',
-            origin: 'center',
-            reset: true
-        });
-        const btnTopo = document.getElementById('btnTopo');
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 200) {
-                btnTopo.style.display = 'block';
-            } else {
-                btnTopo.style.display = 'none';
-            }
-        });
-        btnTopo.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
+    </div>
+
+    <div style="display: flex; align-items: center; text-align: center; flex-direction: column; justify-content: center; color: white;" class="page">
+        <h1>Em Desenvolvimento!</h1>
+        <p>Volte em breve para ver meu portfólio completo!</p>
+    </div>
+
+    <!-- <div class="page" id="sobre">
+        <h1>sobre</h1>
+    </div>
+    <div class="page" id="habilidades">
+        <h1>habilidades</h1>
+    </div>
+    <div class="page" id="projetos">
+        <h1>projetos</h1>
+    </div>
+    <div class="page" id="contato">
+        <h1>contato</h1>
+    </div> -->
+
+    <button id="btnTopo"><i class='fas fa-angle-up'></i></button>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+<script>
+    const btnTopo = document.getElementById('btnTopo');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            btnTopo.style.display = 'block';
+        } else {
+            btnTopo.style.display = 'none';
+        }
+    });
+    btnTopo.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
 </html>
