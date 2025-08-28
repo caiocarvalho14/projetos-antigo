@@ -29,7 +29,7 @@
                     <img src="/assets/topSVG.svg" class="h-16" alt="Flowbite Logo">
                 </a>
                 <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <a href="#contato"><button type="button"
+                    <a id="contato-link"><button type="button"
                             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Contato</button></a>
                     <button data-collapse-toggle="navbar-sticky" type="button"
                         class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -45,14 +45,14 @@
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                     <ul
                         class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
-                        <li>
-                            <a href="#sobre" class="">Sobre</a>
+                        <li id="sobre-link">
+                            <a class="">Sobre</a>
                         </li>
-                        <li>
-                            <a href="#habilidades" class="">Habilidades</a>
+                        <li id="habilidades-link">
+                            <a class="">Habilidades</a>
                         </li>
-                        <li>
-                            <a href="#projetos" class="">Projetos</a>
+                        <li id="projetos-link">
+                            <a class="">Projetos</a>
                         </li>
                     </ul>
                 </div>
@@ -106,95 +106,23 @@
 
         </button>
     </div>
+
     <div class="page" id="habilidades">
-        <h1>habilidades</h1>
+        <h1 class="title">Habilidades</h1>
     </div>
+
     <div class="page" id="projetos">
-        <h1>projetos</h1>
+        <h1 class="title">Projetos</h1>
     </div>
+
     <div class="page" id="contato">
-        <h1>contato</h1>
+        <h1 class="title">Contato</h1>
     </div>
 
     <button id="btnTopo"><i class='fas fa-angle-up'></i></button>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
-<script>
-    // Seleciona o botão principal que controla o menu (o "hambúrguer")
-    const toggleButton = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
-
-    // Seleciona o próprio menu, para podermos verificar sua visibilidade de outra forma se necessário
-    const navbar = document.getElementById('navbar-sticky');
-
-    // Seleciona TODOS os links dentro do menu de navegação
-    const navLinks = navbar.querySelectorAll('a');
-
-    // Itera sobre cada link para adicionar um "ouvinte" de clique
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            // AQUI ESTÁ A LÓGICA PRINCIPAL
-            // Verificamos se o menu está aberto. A forma mais confiável é checar o atributo 'aria-expanded' do botão.
-            // Outra forma é verificar se o menu NÃO está com a classe 'hidden' que o esconde.
-            const isMenuOpen = toggleButton.getAttribute('aria-expanded') === 'true';
-
-            // Se (e somente se) o menu estiver aberto, simula um clique no botão para fechá-lo.
-            if (isMenuOpen) {
-                toggleButton.click();
-            }
-        });
-    });
-    // 
-    const elementoNome = document.querySelector('#nome');
-    const textoParaEscrever = " Caio Carvalho.";
-
-    // --- VARIÁVEIS DE CONTROLE DE VELOCIDADE ---
-    const velocidadeEscrita = 50; // Em milissegundos (ms). Quanto MAIOR, mais LENTA a escrita.
-    const velocidadeApagar = 90; // Em milissegundos (ms). Quanto MAIOR, mais LENTO ao apagar.
-    const tempoEspera = 2000;      // Em milissegundos (ms). Tempo que o texto fica visível antes de apagar.
-
-    function typeWriter(texto, i) {
-        if (i < texto.length) {
-            elementoNome.innerHTML += texto.charAt(i);
-            i++;
-            setTimeout(() => typeWriter(texto, i), velocidadeEscrita);
-        } else {
-            // Quando terminar de escrever, espera um pouco e chama a função para apagar
-            setTimeout(eraseWriter, tempoEspera);
-        }
-    }
-
-    function eraseWriter() {
-        let textoAtual = elementoNome.innerHTML;
-        if (textoAtual.length > 0) {
-            elementoNome.innerHTML = textoAtual.slice(0, -1);
-            setTimeout(eraseWriter, velocidadeApagar);
-        } else {
-            // Quando terminar de apagar, reinicia o ciclo
-            setTimeout(() => typeWriter(textoParaEscrever, 0), 500); // Pequeno delay antes de recomeçar
-        }
-    }
-
-    // Inicia o ciclo pela primeira vez
-    document.addEventListener('DOMContentLoaded', () => {
-        setTimeout(() => typeWriter(textoParaEscrever, 0), 500);
-    });
-
-    const btnTopo = document.getElementById('btnTopo');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 200) {
-            btnTopo.style.display = 'block';
-        } else {
-            btnTopo.style.display = 'none';
-        }
-    });
-    btnTopo.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-</script>
+<script src="/static/js/app.js"></script>
 
 </html>
