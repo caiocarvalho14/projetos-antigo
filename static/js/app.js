@@ -44,8 +44,8 @@ const textoParaEscrever = " Caio Carvalho.";
 
 
 // --- VARIÁVEIS DE CONTROLE DE VELOCIDADE ---
-const velocidadeEscrita = 50; // Em milissegundos (ms). Quanto MAIOR, mais LENTA a escrita.
-const velocidadeApagar = 90; // Em milissegundos (ms). Quanto MAIOR, mais LENTO ao apagar.
+const velocidadeEscrita = 40; // Em milissegundos (ms). Quanto MAIOR, mais LENTA a escrita.
+const velocidadeApagar = 40; // Em milissegundos (ms). Quanto MAIOR, mais LENTO ao apagar.
 const tempoEspera = 2000;      // Em milissegundos (ms). Tempo que o texto fica visível antes de apagar.
 
 function typeWriter(texto, i) {
