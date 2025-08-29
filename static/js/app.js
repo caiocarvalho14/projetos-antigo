@@ -1,17 +1,17 @@
-document.getElementById('sobre-link').addEventListener('click',()=>{
-    document.getElementById('sobre').scrollIntoView({behavior: 'smooth'})
+document.getElementById('sobre-link').addEventListener('click', () => {
+    document.getElementById('sobre').scrollIntoView({ behavior: 'smooth' })
 })
 
-document.getElementById('habilidades-link').addEventListener('click',()=>{
-    document.getElementById('habilidades').scrollIntoView({behavior: 'smooth'})
+document.getElementById('habilidades-link').addEventListener('click', () => {
+    document.getElementById('habilidades').scrollIntoView({ behavior: 'smooth' })
 })
 
-document.getElementById('projetos-link').addEventListener('click',()=>{
-    document.getElementById('projetos').scrollIntoView({behavior: 'smooth'})
+document.getElementById('projetos-link').addEventListener('click', () => {
+    document.getElementById('projetos').scrollIntoView({ behavior: 'smooth' })
 })
 
-document.getElementById('contato-link').addEventListener('click',()=>{
-    document.getElementById('contato').scrollIntoView({behavior: 'smooth'})
+document.getElementById('contato-link').addEventListener('click', () => {
+    document.getElementById('contato').scrollIntoView({ behavior: 'smooth' })
 })
 
 // Seleciona o botão principal que controla o menu (o "hambúrguer")
@@ -21,7 +21,7 @@ const toggleButton = document.querySelector('[data-collapse-toggle="navbar-stick
 const navbar = document.getElementById('navbar-sticky');
 
 // Seleciona TODOS os links dentro do menu de navegação
-const navLinks = navbar.querySelectorAll('a');
+const navLinks = navbar.querySelectorAll('li');
 
 // Itera sobre cada link para adicionar um "ouvinte" de clique
 navLinks.forEach(link => {
