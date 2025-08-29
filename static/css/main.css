@@ -232,7 +232,8 @@ div {
                 text-align: start;
                 font-size: 2vw;
             }
-            span{
+
+            span {
                 font-weight: bold;
             }
         }
@@ -368,16 +369,224 @@ div {
 
 /* PROJETOS */
 
-.projetosblock {
+.projetoscards {
+
+    p,
+    h5,
+    h3 {
+        color: var(--dark-blue);
+    }
+
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5vh;
     flex-wrap: wrap;
-    .modal-f{
-        max-width: 30%;
+
+
+}
+
+.modal-f {
+    max-width: 30%;
+
+    p,
+    h5,
+    h3 {
+        color: var(--dark-blue);
     }
-    .modal-video{
+}
+
+.modal-video {
+    width: 100%;
+}
+
+@media screen and (max-width:710px) {
+    .pcard {
+        margin: 0 2vh;
+        max-height: 30%;
+        p{
+            text-align: justify;
+            font-size: 80%;
+        }
+        a {
+            img {
+                display: none;
+            }
+        }
+    }
+
+    .modal-f {
+        max-width: 100%;
+
+        p,
+        h5,
+        h3 {
+            color: var(--dark-blue);
+        }
+    }
+
+    .projetoscards {
+        gap: 1vh;
+        justify-content: start;
+        align-items: center;
+        height: 100%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+}
+
+/* CONTATO */
+.contato {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 80%;
+    justify-content: space-evenly;
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vh;
+    }
+
+    h2 {
+        font-size: 6vh;
+    }
+
+    a {
+        border-radius: 1vh;
+        font-size: 4vh;
+        padding: 1vh 4vh;
+        background-color: var(--light-blue);
+    }
+
+    a:hover {
+        transition: 0.2s;
+    }
+
+    #linkedin:hover {
+        background-color: #0A66C2;
+    }
+
+    #github:hover {
+        background-color: #0F1118;
+    }
+
+    #instagram:hover {
+        background: radial-gradient(circle at 30% 107%,
+                #fdf497 0%,
+                #fdf497 5%,
+                #fd5949 45%,
+                #d6249f 60%,
+                #285AEB 90%);
+    }
+
+    form {
+        
+
+        height: 50%;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+
+        input,
+        textarea {
+            border-radius: 1vh;
+            color: #00004f;
+            width: 100%;
+        }
+
+        textarea {
+            height: 40%;
+        }
+
+        button {
+            background-color: var(--light-blue);
+            border-radius: 1vh;
+            cursor: pointer;
+            padding: 1vh 0;
+        }
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .contato {
         width: 100%;
+        display: flex;
+        align-items: center;
+        height: 80%;
+        justify-content: space-evenly;
+        flex-direction: column;
+        .links {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            gap: 1vh;
+            
+            flex-wrap: wrap;
+        }
+
+        h2 {
+            font-size: 3vh;
+        }
+
+        a {
+            border-radius: 1vh;
+            font-size: 3.7vh;
+            padding: 1vh 2vh;
+            background-color: var(--light-blue);
+        }
+
+        a:hover {
+            transition: 0.2s;
+        }
+
+        #linkedin:hover {
+            background-color: #0A66C2;
+        }
+
+        #github:hover {
+            background-color: #0F1118;
+        }
+
+        #instagram:hover {
+            background: radial-gradient(circle at 30% 107%,
+                    #fdf497 0%,
+                    #fdf497 5%,
+                    #fd5949 45%,
+                    #d6249f 60%,
+                    #285AEB 90%);
+        }
+
+        form {
+            h1 {
+                font-size: 2vh;
+            }
+
+            height: 50%;
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            gap: 1vh;
+
+            input,
+            textarea {
+                border-radius: 1vh;
+                color: #00004f;
+                width: 100%;
+            }
+
+            textarea {
+                height: 40%;
+            }
+
+            button {
+                background-color: var(--light-blue);
+                border-radius: 1vh;
+                cursor: pointer;
+                padding: 1vh 0;
+            }
+        }
     }
 }
