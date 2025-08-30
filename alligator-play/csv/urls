@@ -1,0 +1,8 @@
+const urls = {
+        times: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQL66VoDmqcIlC6NIoE1oDZwwWPovhV2PHMWt6_DNMTrd02hUE4VK6omhC-B2PN13f0q98roWNbCspH/pub?gid=1510602111&single=true&output=csv',
+        futsal: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQL66VoDmqcIlC6NIoE1oDZwwWPovhV2PHMWt6_DNMTrd02hUE4VK6omhC-B2PN13f0q98roWNbCspH/pub?gid=1254567625&single=true&output=csv',
+        volei: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQL66VoDmqcIlC6NIoE1oDZwwWPovhV2PHMWt6_DNMTrd02hUE4VK6omhC-B2PN13f0q98roWNbCspH/pub?gid=1426030614&single=true&output=csv',
+        queimada: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQL66VoDmqcIlC6NIoE1oDZwwWPovhV2PHMWt6_DNMTrd02hUE4VK6omhC-B2PN13f0q98roWNbCspH/pub?gid=548699490&single=true&output=csv',
+        atletismo: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQL66VoDmqcIlC6NIoE1oDZwwWPovhV2PHMWt6_DNMTrd02hUE4VK6omhC-B2PN13f0q98roWNbCspH/pub?gid=1177369269&single=true&output=csv',
+        cabo_de_guerra: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQL66VoDmqcIlC6NIoE1oDZwwWPovhV2PHMWt6_DNMTrd02hUE4VK6omhC-B2PN13f0q98roWNbCspH/pub?gid=250621862&single=true&output=csv' 
+    };

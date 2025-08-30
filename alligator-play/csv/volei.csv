@@ -1,0 +1,10 @@
+id,data,hora,time_a,time_b,set_1_a,set_1_b,set_2_a,set_2_b,set_3_a,set_3_b,vencedor,grupo,fase
+15,04/09,18:00,14,15,,,,,,,,Volei E. M,Grupos
+16,05/09,07:30,1,8,,,,,,,,Volei EFAF II,Grupos
+17,05/09,08:30,8,2,,,,,,,,Volei EFAF II,Grupos
+23,05/09,13:30,1,2,,,,,,,,Volei EFAF II,Grupos
+24,05/09,14:10,10,11,,,,,,,,Volei E. M,Grupos
+31,05/09,18:20,M_1,M_4,,,,,,,,Volei E. M (Semi 01),Semifinal
+32,06/09,07:30,M_2,M_3,,,,,,,,Volei E.M (Semi 02),Semifinal
+33,06/09,08:10,M_1,M_2,,,,,,,,Volei EFAF (FINAL),FINAL
+34,06/09,08:50,V_31,V_32,,,,,,,,Volei (FINAL),FINAL

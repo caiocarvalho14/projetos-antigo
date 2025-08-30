@@ -1,0 +1,17 @@
+id,data,hora,time_a,time_b,pontos_a,pontos_b,vencedor,grupo,fase
+5,04/09,09:00,1,2,,,,Futsal EFAF II,Grupos
+8,04/09,10:10,5,4,,,,Futsal EFAF I,Grupos
+9,04/09,10:50,6,7,,,,Futsal EFAF I,Grupos
+12,04/09,16:00,11,10,,,,Futsal E. M,Grupos
+13,04/09,16:40,13,14,,,,Futsal E. M,Grupos
+14,04/09,17:20,15,11,,,,Futsal E. M,Grupos
+18,05/09,09:10,6,16,,,,Futsal EFAF I,Grupos
+22,05/09,10:50,16,4,,,,Futsal EFAF I,Grupos
+25,05/09,14:50,13,15,,,,Volei E. M,Grupos
+26,05/09,15:30,M_1,M_4,,,,Futsal EFAF I (6º e 7º),Semifinal
+27,05/09,16:10,M_2,M_3,,,,Futsal EFAF I (6º e 7º),Semifinal
+29,05/09,17:00,M_1,M_4,,,,Futsal EM,Semifinal
+30,05/09,17:40,M_2,M_3,,,,Futsal EM,Semifinal
+38,06/09,10:10,V_26,V_27,,,,Futsal EFAF I (6º e 7º),FINAL
+39,06/09,10:40,M_1,M_2,,,,Futsal EFAF II (FINAL 8º ano),FINAL
+40,06/09,11:10,V_29,V_30,,,,Futsal EM,FINAL

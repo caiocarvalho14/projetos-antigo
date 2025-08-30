@@ -1,0 +1,33 @@
+:root {
+    --gold: #D4AF37;
+    --green: #062910;
+}
+
+body {
+    background-image: url(/assets/img/admin-bg.png);
+    backdrop-filter: blur(4px);
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+}
+a{
+    color: inherit;
+}
+.form-control{
+    background-color: var(--green);
+    color: white;
+}
+* {
+
+    color: var(--gold);
+}
+
+.btn {
+    background-color: #062910;
+    color: #D4AF37;
+}
+
+.btn:hover {
+    background-color: #062910;
+    outline: solid 1px var(--gold);
+}

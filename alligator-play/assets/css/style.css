@@ -1,0 +1,106 @@
+/* assets/css/style.css */
+:root {
+    --bg-green: linear-gradient(to top, #062910, #004D16);
+    --dark-green: #062910;
+    --light-gold: #D4AF37;
+}
+
+.card .team-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #eee;
+    background-color: #fff;
+}
+
+.active {
+    background-color: var(--dark-green);
+}
+
+nav {
+    background: var(--bg-green);
+}
+
+body {
+    background: linear-gradient(to top, #d4af376b, #d4af37), url(../../assets/img/sesi.png);
+    backdrop-filter: blur(6px);
+    height: 100%;
+    background-size: 100%;
+    color: var(--dark-green);
+    background-attachment: fixed;
+}
+
+@media screen and (max-width:1200px) {
+    body {
+        background-size: 1000%;
+    }
+}
+
+.about {
+    cursor: pointer;
+}
+
+.about:hover {
+    transition: 0.1s;
+    transform: scale(1.05);
+}
+
+.gold {
+    color: var(--dark-green);
+}
+
+.nav-link {
+    color: var(--dark-green);
+
+}
+
+.nav-link:hover {
+    color: var(--light-gold);
+    background-color: #062910;
+}
+
+.croc {
+    width: 15%;
+}
+
+.score {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+#modalidades-tab .nav-link {
+    cursor: pointer;
+}
+
+/* assets/css/style.css */
+.card.display-date {
+    color: var(--dark-green);
+    font-size: 20%;
+}
+
+.parciais-volei {
+    font-size: 0.8rem;
+    /* Tamanho da fonte um pouco menor */
+    color: #6c757d;
+    /* Cor cinza padrão do Bootstrap */
+}
+
+/* assets/css/style.css */
+
+.display-date {
+    /* Tamanho grande para a data */
+    font-weight: 700;
+    /* Negrito */
+    color: var(--dark-green);
+    opacity: 0.8;
+    /* Leve transparência para elegância */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+}
+.nav-tabs{
+    margin-bottom: 1px;
+}
+.selectes{
+    padding: 1vh 0;
+}

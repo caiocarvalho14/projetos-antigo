@@ -1,0 +1,90 @@
+/* =============================================== */
+/* ESTILOS PARA A PÁGINA "SOBRE NÓS"               */
+/* =============================================== */
+
+/* 1. Definição da paleta de cores */
+:root {
+    --bg-green: linear-gradient(to top, #062910, #004D16);
+    --dark-green: #062910;
+    --light-gold: #D4AF37;
+}
+
+/* 2. Estilos gerais para a página (pode já existir no seu arquivo) */
+body {
+    background-color: var(--dark-green);
+    color: #f8f9fa;
+    /* Um branco suave do Bootstrap */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../img/admin-bg.png);
+    background-attachment: fixed;
+    backdrop-filter: blur(4px);
+    background-position: center;
+}
+
+/* 3. Classes personalizadas para os componentes da página */
+
+/* Seção de herói com o gradiente */
+.hero-section {
+    padding: 6rem 0;
+    color: white;
+}
+
+/* Cor de texto dourada para destaques */
+.text-gold {
+    color: var(--light-gold);
+}
+
+/* Estilo para o botão personalizado */
+.btn-gold {
+    background-color: var(--light-gold);
+    color: var(--dark-green);
+    font-weight: bold;
+    border: 2px solid var(--light-gold);
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: transparent;
+    color: var(--light-gold);
+    border: 2px solid var(--light-gold);
+}
+
+/* Estilo para a lista de desenvolvedores */
+.developer-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    /* Espaçamento entre os nomes */
+    justify-content: center;
+}
+
+.developer-badge {
+    cursor: pointer;
+    background-color: rgba(212, 175, 55, 0.1);
+    /* Fundo dourado bem sutil */
+    border: 1px solid var(--light-gold);
+    color: var(--light-gold);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    /* Formato de "pílula" */
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.developer-badge:hover {
+    background-color: var(--light-gold);
+    color: var(--dark-green);
+}
+
+/* Estilo para os logos das instituições */
+.institution-logo {
+    max-height: 80px;
+    filter: grayscale(100%) brightness(300%);
+    /* Efeito branco para logos em fundos escuros */
+    transition: filter 0.3s ease;
+}
+
+.institution-logo:hover {
+    filter: none;
+    /* Cor original ao passar o mouse */
+}
