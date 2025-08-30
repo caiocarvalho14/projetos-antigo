@@ -92,9 +92,10 @@ function createGameCard(game) {
     return `
         <div class="col-md-6 col-lg-4">
             <div class="card shadow-sm game-card">
-                <div class="card-header text-center">
+                <div class="card-header justify-content-between d-flex j-space text-center">
+                    <span>Jogo ${game.id} </span>
                     <span class="text-capitalize fw-bold">${game.modalidade.replace('_', ' ')}</span>
-                    ${game.fase ? `<span class="text-muted"> - ${game.fase}</span>` : ''}
+                    ${game.fase ? `<span class="text-muted">${game.fase}</span>` : ''}
                     ${winnerId && winnerId.trim() !== '' ? `<span class="ms-2 text-muted small fw-normal">(${game.data})</span>` : ''}
                 </div>
                 <div class="card-body">
