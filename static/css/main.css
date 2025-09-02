@@ -2,6 +2,7 @@
     --gradient-blue-dark: linear-gradient(to bottom, #0e0774, #00004f);
     --dark-blue: #00004f;
     --light-blue: #2b16bd;
+    --gradient-light: linear-gradient(135deg, #10007a, #00004f);
 }
 
 * {
@@ -11,7 +12,7 @@
 
 body {
     height: 100vh;
-    background: var(--gradient-blue-dark);
+    background: var(--gradient-light);
     background-attachment: fixed;
 }
 
@@ -65,6 +66,23 @@ div {
     font-size: 16px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     transition: opacity 0.3s ease;
+}
+
+.hero {
+    /* faz o recorte */
+    color: white;
+}
+
+#hero {
+    background: var(--gradient-blue-dark);
+
+}
+
+.transition {
+    width: 100%;
+    height: 100px;
+    background: var(--dark-blue);
+    clip-path: ellipse(60% 100% at 50% 0%);
 }
 
 /* HERO */
@@ -216,34 +234,50 @@ div {
 }
 
 #sobre {
+    position: relative;
+    /* Essencial para o posicionamento do ::before */
     text-align: center;
+    background: none;
+    /* Adicione um overflow-x: hidden; para garantir que nada vaze para os lados */
+    overflow-x: hidden;
+}
 
-    .about {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        gap: 5vw;
+#sobre .about {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+}
 
-        div {
-            width: 30%;
+#sobre .about div {
+    width: 30%;
+}
 
-            h1 {
-                font-weight: normal;
-                text-align: start;
-                font-size: 2vw;
-            }
+#sobre .about div h1 {
+    font-weight: normal;
+    text-align: start;
+    font-size: 2vw;
+}
 
-            span {
-                font-weight: bold;
-            }
-        }
-    }
+#sobre .about div span {
+    font-weight: bold;
+}
 
-    p {
-        text-align: justify;
-        padding: 1vh 0;
-        font-size: 2vh;
-    }
+#sobre p {
+    text-align: justify;
+    padding: 1vh 0;
+    font-size: 2vh;
+}
+
+#sobre::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: var(--dark-blue); */
+    z-index: -1;
 }
 
 @media screen and (max-width: 710px) {
@@ -404,10 +438,12 @@ div {
     .pcard {
         margin: 0 2vh;
         max-height: 30%;
-        p{
+
+        p {
             text-align: justify;
             font-size: 80%;
         }
+
         a {
             img {
                 display: none;
@@ -482,7 +518,7 @@ div {
     }
 
     form {
-        
+
 
         height: 50%;
         width: 25%;
@@ -518,12 +554,13 @@ div {
         height: 80%;
         justify-content: space-evenly;
         flex-direction: column;
+
         .links {
             width: 75%;
             display: flex;
             flex-direction: column;
             gap: 1vh;
-            
+
             flex-wrap: wrap;
         }
 
@@ -535,7 +572,6 @@ div {
             border-radius: 1vh;
             font-size: 3.7vh;
             padding: 1vh 2vh;
-            background-color: var(--light-blue);
         }
 
         a:hover {
