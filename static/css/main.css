@@ -635,5 +635,7 @@ div {
     }
 }
 footer{
+    padding: 15px 0;
+    border-top: var(--light-blue) solid 1px;
     text-align: center;
 }
