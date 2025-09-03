@@ -135,7 +135,7 @@ function processData(data) {
         if (teamId.startsWith('P_')) {
             const gameId = teamId.split('_')[1];
             const allGamesInSport = allSportsGames[modalidade] || [];
-            const referencedGame = allGamesInSport.find(g => g.id === gameId);
+            const referencedGame = allSportsGames[modalidade].find(g => g.id === gameId);
 
             if (referencedGame && referencedGame.vencedor) {
                 const winnerId = referencedGame.vencedor;
@@ -154,7 +154,8 @@ function processData(data) {
             return {
                 ...game,
                 modalidade: 'atletismo',
-                participantes: game.participantes ? game.participantes.split(';').map(p => p.trim()) : []
+                participantes: game.participantes ? game.participantes.split(';').map(p => p.trim()) : [],
+                vencedor: game.vencedor || null
             };
         }
 

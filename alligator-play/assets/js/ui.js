@@ -11,6 +11,14 @@ function createAthleticsCard(event) {
         `<li class="list-group-item bg-transparent border-0 px-1 py-0">${participant}</li>`
     ).join('');
 
+    // Cria um elemento HTML para o vencedor apenas se o campo 'vencedor' existir
+    const winnerHtml = event.vencedor ? `
+        <div class="mt-3 pt-3 border-top text-center">
+            <h6 class="card-subtitle text-muted mb-1">Vencedor(a)</h6>
+            <p class="card-text fw-bold text-success">${event.vencedor}</p>
+        </div>
+    ` : '';
+
     return `
         <div class="col-md-6 col-lg-4">
             <div class="card shadow-sm game-card">
@@ -23,6 +31,7 @@ function createAthleticsCard(event) {
                     <ul class="list-group list-group-flush text-center small">
                         ${participantsHtml}
                     </ul>
+                    ${winnerHtml}
                 </div>
                 <div class="card-footer text-center text-muted small">
                     ${event.data} - ${event.hora}
@@ -47,9 +56,9 @@ function createGameCard(game) {
     const timeA = game.time_a_details;
     const timeB = game.time_b_details;
     const winnerId = game.vencedor;
-
-    const logoA = timeA.logo ? `assets/img/logos/${timeA.logo}` : 'assets/img/logos/turmaextra.jpg';
-    const logoB = timeB.logo ? `assets/img/logos/${timeB.logo}` : 'assets/img/logos/turmaextra.jpg';
+console.log(`Time: ${timeA.nome}, Valor lido da planilha (logo_dir):`, timeA.logo_dir);
+    const logoA = timeA.logo_dir ? `assets/img/logos/${timeA.logo_dir}` : 'assets/img/placeholder.png';
+    const logoB = timeB.logo_dir ? `assets/img/logos/${timeB.logo_dir}` : 'assets/img/placeholder.png';
     
     const cardClassA = timeA.isPlaceholder 
         ? 'bg-secondary-subtle' 
@@ -92,10 +101,9 @@ function createGameCard(game) {
     return `
         <div class="col-md-6 col-lg-4">
             <div class="card shadow-sm game-card">
-                <div class="card-header justify-content-between d-flex j-space text-center">
-                    <span>Jogo ${game.id} </span>
+                <div class="card-header text-center">
                     <span class="text-capitalize fw-bold">${game.modalidade.replace('_', ' ')}</span>
-                    ${game.fase ? `<span class="text-muted">${game.fase}</span>` : ''}
+                    ${game.fase ? `<span class="text-muted"> - ${game.fase}</span>` : ''}
                     ${winnerId && winnerId.trim() !== '' ? `<span class="ms-2 text-muted small fw-normal">(${game.data})</span>` : ''}
                 </div>
                 <div class="card-body">
