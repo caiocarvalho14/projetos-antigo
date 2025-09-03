@@ -7,7 +7,7 @@
 
     /* Gradiente escuro atualizado com as novas cores de base. */
     --gradient-blue-dark: linear-gradient(to bottom, var(--light-blue), var(--dark-blue));
-    
+
     /* Gradiente claro atualizado para ser um destaque vibrante e moderno. */
     --gradient-light: linear-gradient(135deg, #64ffda, #112240);
 
@@ -15,13 +15,17 @@
     /* === CORES ADICIONAIS RECOMENDADAS === */
     /* Sua paleta original não tinha cores para texto ou um destaque único. */
     /* Recomendo fortemente adicionar estas variáveis para um design completo. */
-    
-    --text-primary: #ccd6f6;   /* Para títulos e textos principais */
-    --text-secondary: #8892b0; /* Para parágrafos e textos de apoio */
-    --accent: #64ffda;         /* Cor de destaque para links e botões */
-    --gray:#E2E8F0;
-    --bg-img:#ccd6f652;
+
+    --text-primary: #ccd6f6;
+    /* Para títulos e textos principais */
+    --text-secondary: #8892b0;
+    /* Para parágrafos e textos de apoio */
+    --accent: #64ffda;
+    /* Cor de destaque para links e botões */
+    --gray: #E2E8F0;
+    --bg-img: #ccd6f652;
 }
+
 * {
     font-family: poppins;
 }
@@ -32,9 +36,11 @@ body {
     background-attachment: fixed;
     color: var(--dark-blue);
 }
-.light-font{
+
+.light-font {
     color: var(--text-primary);
 }
+
 .title {
     padding: 4vh 0;
     font-size: 4vh;
@@ -64,9 +70,11 @@ nav {
 .page {
     height: 100dvh;
 }
-.page2{
+
+.page2 {
     background-color: #f5f7fd;
 }
+
 div {
     /* outline: auto; */
 }
@@ -91,10 +99,12 @@ div {
     /* faz o recorte */
     color: var(--text-primary);
 }
-#contato{
+
+#contato {
     background: var(--dark-blue);
 }
-#hero{
+
+#hero {
     background: var(--gradient-blue-dark);
 
 }
@@ -105,6 +115,7 @@ div {
     background: var(--dark-blue);
     clip-path: ellipse(60% 100% at 50% 0%);
 }
+
 .transition2 {
     width: 100%;
     height: 100px;
@@ -163,7 +174,8 @@ div {
             font-size: 5vh;
             line-height: 0vh;
         }
-        a:hover{
+
+        a:hover {
             color: var(--accent);
         }
     }
@@ -502,7 +514,7 @@ div {
     width: 100%;
     display: flex;
     align-items: center;
-    height: 80%;
+    height: 75%;
     justify-content: space-evenly;
 
     .links {
@@ -577,7 +589,7 @@ div {
         width: 100%;
         display: flex;
         align-items: center;
-        height: 80%;
+        height: auto%;
         justify-content: space-evenly;
         flex-direction: column;
 
@@ -596,7 +608,7 @@ div {
 
         a {
             border-radius: 1vh;
-            font-size: 3.7vh;
+            font-size: 3vh;
             padding: 1vh 2vh;
         }
 
@@ -621,6 +633,8 @@ div {
                     #285AEB 90%);
         }
 
+        
+
         form {
             h1 {
                 font-size: 2vh;
@@ -640,7 +654,7 @@ div {
             }
 
             textarea {
-                height: 40%;
+                height: 30%;
             }
 
             button {
@@ -651,9 +665,13 @@ div {
             }
         }
     }
+    #contato > h1>p {
+            font-size: 40%;
+        }
 }
-footer{
-    padding: 4px 0;
+
+footer {
+    padding: 1% 0;
     border-top: var(--light-blue) solid 1px;
     text-align: center;
     background-color: var(--dark-blue);

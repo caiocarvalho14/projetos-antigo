@@ -26,9 +26,7 @@ const navLinks = navbar.querySelectorAll('li');
 // Itera sobre cada link para adicionar um "ouvinte" de clique
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        // AQUI ESTÁ A LÓGICA PRINCIPAL
-        // Verificamos se o menu está aberto. A forma mais confiável é checar o atributo 'aria-expanded' do botão.
-        // Outra forma é verificar se o menu NÃO está com a classe 'hidden' que o esconde.
+    
         const isMenuOpen = toggleButton.getAttribute('aria-expanded') === 'true';
 
         // Se (e somente se) o menu estiver aberto, simula um clique no botão para fechá-lo.
@@ -92,3 +90,4 @@ btnTopo.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
