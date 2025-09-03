@@ -1,21 +1,39 @@
 :root {
-    --gradient-blue-dark: linear-gradient(to bottom, #0e0774, #00004f);
-    --dark-blue: #00004f;
-    --light-blue: #2b16bd;
-    --gradient-light: linear-gradient(135deg, #10007a, #00004f);
-}
+    /* Mapeado para o fundo principal. O cinza escuro foi trocado por um azul-marinho profissional. */
+    --dark-blue: #0a192f;
 
+    /* Mapeado para elementos secundários. O cinza claro foi trocado por um azul mais suave para criar profundidade. */
+    --light-blue: #112240;
+
+    /* Gradiente escuro atualizado com as novas cores de base. */
+    --gradient-blue-dark: linear-gradient(to bottom, var(--light-blue), var(--dark-blue));
+    
+    /* Gradiente claro atualizado para ser um destaque vibrante e moderno. */
+    --gradient-light: linear-gradient(135deg, #64ffda, #112240);
+
+
+    /* === CORES ADICIONAIS RECOMENDADAS === */
+    /* Sua paleta original não tinha cores para texto ou um destaque único. */
+    /* Recomendo fortemente adicionar estas variáveis para um design completo. */
+    
+    --text-primary: #ccd6f6;   /* Para títulos e textos principais */
+    --text-secondary: #8892b0; /* Para parágrafos e textos de apoio */
+    --accent: #64ffda;         /* Cor de destaque para links e botões */
+    --gray:#E2E8F0;
+    --bg-img:#ccd6f652;
+}
 * {
     font-family: poppins;
 }
 
 body {
     height: 100vh;
-    background: #ffffff;
+    background: var(--gray);
     background-attachment: fixed;
+    color: var(--dark-blue);
 }
 .light-font{
-    color: white;
+    color: var(--text-primary);
 }
 .title {
     padding: 4vh 0;
@@ -58,8 +76,8 @@ div {
     bottom: 30px;
     right: 30px;
     display: none;
-    background-color: #3A1DE1;
-    color: white;
+    background-color: var(--accent);
+    color: var(--dark-blue);
     border: none;
     padding: 12px 18px;
     border-radius: 5px;
@@ -71,7 +89,7 @@ div {
 
 .hero {
     /* faz o recorte */
-    color: white;
+    color: var(--text-primary);
 }
 #contato{
     background: var(--dark-blue);
@@ -105,14 +123,13 @@ div {
     img {
         height: 80%;
         transition: 0.1s;
-        filter: drop-shadow(30px 10px 4px #4444dd);
         border-radius: 2vh 2vh 0 0;
-        background-color: #3a1de1;
+        background-color: var(--bg-img);
         mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
     }
 
     .hero1 {
-        color: white;
+        color: var(--text-primary);
         text-align: center;
 
         h1 {
@@ -130,7 +147,7 @@ div {
         display: flex;
         align-items: center;
         gap: 5vw;
-        color: white;
+        color: var(--text-primary);
 
         h1 {
             font-size: 6vh;
@@ -145,6 +162,9 @@ div {
         a {
             font-size: 5vh;
             line-height: 0vh;
+        }
+        a:hover{
+            color: var(--accent);
         }
     }
 
@@ -163,14 +183,11 @@ div {
 
         img {
             transition: 0.1s;
-            filter: drop-shadow(30px 10px 4px #4444dd);
             border-radius: 2vh 2vh 0 0;
-            background-color: #3a1de1;
             mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
         }
 
         .hero1 {
-            color: white;
             text-align: center;
 
             h1 {
@@ -190,7 +207,6 @@ div {
             display: flex;
             align-items: center;
             gap: 15vw;
-            color: white;
             flex-direction: column;
             text-align: center;
 
