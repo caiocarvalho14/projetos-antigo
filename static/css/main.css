@@ -278,14 +278,18 @@ div {
     /* Adicione um overflow-x: hidden; para garantir que nada vaze para os lados */
     overflow-x: hidden;
 }
-
 #sobre .about {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 5vw;
 }
-
+#sobre .about img{
+    border-radius: 5%;
+    width: 32%;
+    height: 60%;
+}
 #sobre .about div {
     width: 30%;
 }
@@ -318,8 +322,9 @@ div {
 }
 
 @media screen and (max-width: 710px) {
-    .img {
-        width: 60%;
+    #sobre .about img{
+        width: 45%;
+        height: auto;
     }
 
     #nome {
@@ -373,7 +378,7 @@ div {
         p {
             text-align: justify;
             padding: 1vh 0;
-            font-size: 1.3vh;
+            font-size: 1.5vh;
         }
     }
 }
@@ -589,7 +594,7 @@ div {
         width: 100%;
         display: flex;
         align-items: center;
-        height: auto%;
+        height: auto;
         justify-content: space-evenly;
         flex-direction: column;
 
