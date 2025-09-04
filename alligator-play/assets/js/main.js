@@ -43,13 +43,13 @@ function calculateStandings(group, allGamesInSport) {
         }
 
         // Adiciona pontos (3 para vitória, 1 para empate)
-        if (scoreA > scoreB) {
-            standings[teamA].pontos += 3;
-        } else if (scoreB > scoreA) {
-            standings[teamB].pontos += 3;
-        } else {
+        if (game.vencedor && game.vencedor.toLowerCase() === 'empate') {
             standings[teamA].pontos += 1;
             standings[teamB].pontos += 1;
+        } else if (game.vencedor === teamA) {
+            standings[teamA].pontos += 3;
+        } else if (game.vencedor === teamB) {
+            standings[teamB].pontos += 3;
         }
     });
 
@@ -125,7 +125,7 @@ function processData(data) {
             const allGamesInSport = allSportsGames[modalidade] || [];
             const referencedGame = allGamesInSport.find(g => g.id === gameId);
 
-            if (referencedGame && referencedGame.vencedor) {
+            if (referencedGame && referencedGame.vencedor && referencedGame.vencedor.toLowerCase() !== 'empate') {
                 return teamsMap[referencedGame.vencedor];
             } else {
                 return { id: teamId, nome: `Vencedor Jogo ${gameId}`, logo_dir: '', isPlaceholder: true };
@@ -137,7 +137,7 @@ function processData(data) {
             const allGamesInSport = allSportsGames[modalidade] || [];
             const referencedGame = allSportsGames[modalidade].find(g => g.id === gameId);
 
-            if (referencedGame && referencedGame.vencedor) {
+            if (referencedGame && referencedGame.vencedor && referencedGame.vencedor.toLowerCase() !== 'empate') {
                 const winnerId = referencedGame.vencedor;
                 const loserId = winnerId === referencedGame.time_a ? referencedGame.time_b : referencedGame.time_a;
                 return teamsMap[loserId];
