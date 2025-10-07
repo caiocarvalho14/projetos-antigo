@@ -64,14 +64,10 @@ nav {
 }
 
 .page {
-    height: calc(100dvh - 56px);
-    width: 100%;
-}
-
-.page-m {
     min-height: calc(100dvh - 56px);
     width: 100%;
 }
+
 
 #home {
     margin-top: 56px;
@@ -179,7 +175,7 @@ nav {
 
         @media (max-width:1024px) {
 
-            font-size: 100%;
+            font-size:85%;
 
         }
     }
@@ -189,7 +185,7 @@ nav {
 
         @media (max-width:1024px) {
 
-            width: 80%;
+            width: 90%;
             min-height: 60%;
         }
     }
