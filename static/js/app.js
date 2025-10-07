@@ -53,3 +53,12 @@ btnTopo.addEventListener('click', () => {
     });
 });
 
+window.addEventListener('scroll', () => {
+    const bar = document.getElementById('bar')
+    const scrollTop = window.scrollY; // quanto rolou
+    const windowHeight = window.innerHeight; // altura da janela visível
+    const documentHeight = document.documentElement.scrollHeight; // altura total do documento
+
+    const scrollPercent = parseInt((scrollTop / (documentHeight - windowHeight)) * 100);
+    bar.style.width=`${scrollPercent}%`
+});

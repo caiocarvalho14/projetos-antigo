@@ -31,7 +31,11 @@
     background-color: var(--dark-blue);
 }
 
-
+#bar {
+    padding-top: 10px;
+    width: 0%;
+    border-bottom: solid 1px var(--dark-blue);
+}
 
 .title {
 
@@ -143,14 +147,14 @@ nav {
 
 .t1 {
     width: 100%;
-    height: 56px;
+    height: 67px;
     background-color: var(--gray);
     clip-path: ellipse(60% 100% at 50% 0%);
 }
 
 .t2 {
     width: 100%;
-    height: 56px;
+    height: 67px;
     background: var(--gray);
     clip-path: ellipse(60% 100% at 50% 100%);
 }
