@@ -85,7 +85,6 @@ nav {
 
     /* Animação do cursor piscando */
 
-
     #nome {
         border-right: 5px solid var(--dark-blue);
         animation: blink-caret .75s step-end infinite;
@@ -115,6 +114,11 @@ nav {
             border-radius: 10%;
             outline: solid 1px var(--light-blue);
         }
+    }
+
+    @media (max-width:1024px) {
+
+        height: 90vh;
     }
 }
 
@@ -175,7 +179,7 @@ nav {
 
         @media (max-width:1024px) {
 
-            font-size:85%;
+            font-size: 85%;
 
         }
     }
