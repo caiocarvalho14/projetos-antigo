@@ -166,7 +166,7 @@ nav {
         width: 500px;
         border-radius: 10%;
         object-fit: cover;
-        border: solid 2px var(--dark-blue);
+        border: solid 2px white;
 
         @media (max-width:1024px) {
             display: none;
@@ -234,8 +234,6 @@ nav {
     border-radius: 10px;
     background-color: white;
     margin-bottom: 10px;
-    outline: solid 1px var(--dark-blue);
-    outline-offset: -3px;
 
     .btn {
         background: var(--text-primary);
