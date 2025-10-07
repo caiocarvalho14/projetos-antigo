@@ -1,0 +1,52 @@
+.carousel {
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 600px;
+    overflow: hidden;
+    display: flex;
+
+    >* {
+        flex: 0 0 100%;
+    }
+}
+
+.card {
+    cursor: pointer;
+    width: 100%;
+    color: white;
+    border-radius: 24px;
+    padding: 10px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background: var(--text-primary);
+
+}
+
+.group {
+    display: flex;
+    gap: 15px;
+    /* Add padding to the right to create a gap between the last and first card. */
+    padding-right: 20px;
+    will-change: transform;
+    /* We should be nice to the browser - let it know what we're going to animate. */
+    animation: scrolling 15s linear infinite;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.carousel {
+
+    &:hover .group {
+        animation-play-state: paused;
+    }
+}

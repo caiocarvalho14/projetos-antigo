@@ -1,422 +1,234 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
-<head>
+<head class="">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caio Carvalho - Desenvolvedor FullStack</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/scss.css">
+    <link rel="stylesheet" href="/static/css/root.css">
+    <link rel="stylesheet" href="/static/css/queries.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="/assets/favicon.svg" type="image/x-icon">
     <meta name="description"
         content="Desenvolvedor web com experiência em Python, especializado em análise e desenvolvimento de sistemas, focado em criar soluções eficientes e escaláveis.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caio Carvalho - Desenvolvedor Full-Stack</title>
-    <link rel="shortcut icon" href="/assets/favicon.svg" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
-
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="/static/css/main.css">
 </head>
 
 <body>
 
+    <div class="page" id="home">
 
-    <div class="page" id="hero">
-        <nav class="">
-            <div class="max-w-screen-xl nav flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="https://caiocarvalho.dev.br" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="/assets/header.svg" class="h-16" alt="Flowbite Logo">
-                </a>
-                <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <a id="contato-link"><button style="background-color: var(--accent); color: var(--dark-blue);" type="button" 
-                            class="text-white   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:focus:ring-blue-800">Contato</button></a>
-                    <button data-collapse-toggle="navbar-sticky" type="button"
-                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                        aria-controls="navbar-sticky" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 17 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 1h15M1 7h15M1 13h15" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                    <ul
-                        class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
-                        <li id="sobre-link">
-                            <a class="">Sobre</a>
+
+        <!-- NAV -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a href="https://caiocarvalho.dev.br"><img src="/assets/header2.svg" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse w-25" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Início</a>
                         </li>
-                        <li id="habilidades-link">
-                            <a class="">Habilidades</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">Sobre</a>
                         </li>
-                        <li id="projetos-link">
-                            <a class="">Projetos</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projetos">Projetos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <div class="hero">
-            <div class="hero1">
-                <h1>BEM VINDO AO MEU <span>PORTFÓLIO!</span></h1>
-                <p>Abaixo você encontrará uma seleção dos meus melhores projetos, as tecnologias que domino e um pouco
-                    sobre
-                    minha trajetória como desenvolvedor.</p>
-            </div>
-            <div class="hero2">
-                <img src="/assets/hero-img.png" class="" alt="">
-                <div class="hero3">
-                    <h1>Caio Carvalho</h1>
-                    <p>Desenvolvedor Full-Stack</p>
-                    <a href="https://www.linkedin.com/in/caio-carvalho-326269358/" target="_blank"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/caiocarvalho14" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:caioscphb@gmail.com"><i class="fas fa-envelope" id="email"></i></a>
-                    <a href="https://www.instagram.com/caio.carvalho9/" target="_blank"><i
-                            class="fab fa-instagram"></i></a>
+        <div class="flex-column flex-md-row  hero d-flex justify-content-evenly align-items-center">
+
+            <div class="w-75 text-start text-md-start w-md-50">
+                <h2>Olá, eu sou o</h2>
+                <h1><strong id="nome" class="w-md-50"></strong></h1>
+                <h3>Desenvolvedor Fullstack</h3>
+                <p class="">Desenvolvedor web especializado na análise e desenvolvimento de sistemas, focado em criar
+                    soluções eficientes e escaláveis.</p>
+                <div class="links-hero">
+                    <ul class="d-flex align-start gap-2">
+                        <a href="https://github.com/caiocarvalho14" target="_blank">
+                            <li>
+                                <i class="bi bi-github"></i>
+                            </li>
+                        </a>
+                        <a href="https://www.linkedin.com/in/caio-carvalho-326269358/" target="_blank">
+                            <li>
+                                <i class="bi bi-linkedin"></i>
+                            </li>
+                        </a>
+                        <a href="https://www.instagram.com/caio.carvalho9/" target="_blank">
+                            <li>
+                                <i class="bi bi-instagram"></i>
+                            </li>
+                        </a>
+                    </ul>
                 </div>
             </div>
+
+            <img src="/assets/hero-img.jpg" alt="">
+
         </div>
 
     </div>
 
-    <div class="transition1">
+    <div class="t2" id="sobre"></div>
+    <div class="page gray d-flex justify-content-evenly flex-column align-items-center">
 
-    </div>
-
-    <div class="page" id="sobre">
-
-        <h1 class="title">Sobre Mim</h1>
-        <div class="about">
-            <img class="img" src="/assets/about-me-img.png" alt="">
-            <div>
-                <h1>Olá, sou o<span id="nome"></span></h1>
+        <div class="about flex-column flex-md-row d-flex align-items-center justify-content-evenly">
+            <img src="assets/about-me-img.png" alt="">
+            <div class="about-topics">
+                <h1>Sobre Mim </h1>
                 <p>Um desenvolvedor full-stack em formação pelo curso Técnico em Informática para Internet do SENAI.
                     Minha paixão é usar a tecnologia para resolver problemas e construir soluções web completas, o que
                     me motiva a estar sempre aprendendo. Atualmente, dedico meu foco ao EstágioS, um projeto de larga
                     escala para o gerenciamento de estágios, onde tenho a oportunidade de aplicar na prática meus
                     conhecimentos em front-end, back-end e banco de dados.</p>
-                <p>Como desenvolvedor, acredito que a qualidade de uma aplicação nasce de uma base sólida e bem
-                    planejada. Por isso, sou um grande defensor das melhores práticas de desenvolvimento, utilizando
-                    modelagem UML para garantir uma arquitetura robusta e priorizando sempre um código limpo, organizado
-                    e escalável. Meu compromisso é estar sempre atualizado com as tecnologias mais modernas, buscando
-                    entregar projetos que não sejam apenas funcionais, mas também eficientes e fáceis de manter.</p>
-            </div>
-        </div>
-        <button>
-
-        </button>
-    </div>
-
-    <div class="page page2" id="habilidades">
-        <h1 class="title">Habilidades Técnicas</h1>
-        <div class="habilities">
-            <div class="card">
-                <h1>Front-End</h1>
-                <p><i class="fas fa-angle-right"></i> HTML5 <i class="devicon-html5-plain colored"></i></p>
-                <p><i class="fas fa-angle-right"></i> CSS3 <i class="devicon-css3-plain colored"></i></p>
-                <p><i class="fas fa-angle-right"></i> JavaScript ES6+ <i class="devicon-javascript-plain colored"></i>
-                </p>
-                <p><i class="fas fa-angle-right"></i> Bootstrap CSS <i class="devicon-bootstrap-plain colored"></i></p>
-                <p><i class="fas fa-angle-right"></i> TailWind CSS <i class="devicon-tailwindcss-original colored"></i>
-                </p>
-            </div>
-            <div class="card">
-                <h1>Back-End</h1>
-                <p><i class="fas fa-angle-right"></i> Django (Python) <i class="devicon-django-plain"></i></p>
-                <h1>Banco de Dados</h1>
-                <p><i class="fas fa-angle-right"></i> SQLite <i class="devicon-sqlite-plain"></i></p>
-                <p><i class="fas fa-angle-right"></i> MYSQL <i class="devicon-mysql-original"></i></p>
-            </div>
-            <div class="card">
-                <h1>Ferramentas e DevOps</h1>
-                <p><i class="fas fa-angle-right"></i> Git <i class="devicon-git-plain colored"></i></p>
-                <p><i class="fas fa-angle-right"></i> GitHub <i class="devicon-github-original colored"></i></p>
-                <p><i class="fas fa-angle-right"></i> Heroku <i class="devicon-heroku-plain-wordmark colored"></i></p>
-                <p><i class="fas fa-angle-right"></i> Figma <i class="devicon-figma-plain colored"></i></p>
-                <h1>Modelagem</h1>
-                <p><i class="fas fa-angle-right"></i> Unified Modeling Language (UML) <i
-                        class="devicon-unifiedmodelinglanguage-plain colored"></i></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="page" id="projetos">
-        <h1 class="title">Projetos <br>
-            <p>/* Clique em qualquer um para ver mais detalhes */</p>
-        </h1>
-
-        <div class="projetoscards">
-
-
-            <!-- START CARD -->
-            <div data-modal-target="estagios" data-modal-toggle="estagios" type="button"
-                class="max-w-sm pcard  bg-white border border-gray-200 rounded-lg shadow-sm ">
-                <a>
-                    <img class="rounded-t-lg" src="/gifs/estagio.gif" alt="" />
-                </a>
-                <div class="p-5">
-                    <a>
-                        <h5 class="mb-2  font-bold tracking-tight text-gray-900 dark:text-white">"EstagioS"</h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Sistema de gerenciamento de estágios
-                        para jovens aprendizes, desenvolvido com Django<i class="devicon-django-plain colored"></i>,
-                        PostgreSQL<i class="devicon-postgresql-plain colored"></i> e Tailwind CSS<i
-                            class="devicon-tailwindcss-original colored"></i> durante o curso técnico de Desenvolvimento
-                        Web no SENAI.</p>
-                    <a
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Ver Mais
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
+                <a href="/assets/Currículo Caio Carvalho.pdf" target="_blank"><button class="btn mb-4">Ver Currículo <i class="bi bi-filetype-pdf"></i></button></a>
+                <div class="topcs d-flex">
+                    <div>
+                        <h1>Educação</h1>
+                        <p>Técnico em Desenvolvimento Web - Senai</p>
+                    </div>
+                    <div>
+                        <h1>Especialização</h1>
+                        <p>Desenvolvimento FullStack</p>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <!-- START CARD -->
-            <div data-modal-target="ecommerce" data-modal-toggle="ecommerce" type="button"
-                class="max-w-sm pcard bg-white border border-gray-200 rounded-lg shadow-sm ">
-                <a>
-                    <img class="rounded-t-lg" src="gifs/ecommerce.gif" alt="" />
-                </a>
-                <div class="p-5">
-                    <a>
-                        <h5 class="mb-2  font-bold tracking-tight text-gray-900 dark:text-white">Ecommerce de doceria
-                        </h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">E-commerce funcional para uma doceria,
-                        com catálogo de produtos, opção de carrinho e finalização do pedido de forma prática via
-                        integração direta com o WhatsApp do responsável.</p>
-                    <a
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Ver Mais
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
-                </div>
+        <div class="w-100">
+            <div class="title">
+                <h1>Tecnologias</h1>
+                <h2>Ferramentas e tecnologias que utilizo no desenvolvimento.</h2>
             </div>
-
-
-
-
-
-
-            <!-- START CARD -->
-            <div data-modal-target="landing" data-modal-toggle="landing" type="button"
-                class="max-w-sm bg-white pcard  border border-gray-200 rounded-lg shadow-sm ">
-                <a>
-                    <img class="rounded-t-lg" src="gifs/ladingpage.gif" alt="" />
-                </a>
-                <div class="p-5">
-                    <a>
-                        <h5 class="mb-2  font-bold tracking-tight text-gray-900 dark:text-white">
-                            Mercantil Nicolau
-                        </h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Landing page comercial responsiva e
-                        moderna desenvolvida com Bootstrap<i class="devicon-bootstrap-plain colored"></i>.</p>
-                    <a
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Ver Mais
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
+            <div class="carousel">
+                <div class="group">
+                    <div class="card">
+                        <i class="devicon-html5-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-css3-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-javascript-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-bootstrap-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-tailwindcss-original colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-django-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-djangorest-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-mysql-original colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-sqlite-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-postgresql-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-git-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-github-original colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-heroku-original colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-unifiedmodelinglanguage-plain colored"></i>
+                    </div>
+                </div>
+                <div aria-hidden class="group">
+                    <div class="card">
+                        <i class="devicon-html5-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-css3-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-javascript-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-bootstrap-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-tailwindcss-original colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-django-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-djangorest-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-mysql-original colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-sqlite-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-postgresql-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-git-plain colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-github-original colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-heroku-original colored"></i>
+                    </div>
+                    <div class="card">
+                        <i class="devicon-unifiedmodelinglanguage-plain colored"></i>
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
-    <div class="transition2">
 
-    </div>
-    <div class="page" id="contato">
-        <h1 class="title light-font">Vamos trabalhar juntos?
-            <p>Estou sempre aberto a novas oportunidades e projetos interessantes. Entre em contato para conversarmos!</p>
-        </h1>
-        
-        <div class="contato">
-            <div class="links">
-                <h1>Redes Sociais</h1>
-                <a href="https://www.linkedin.com/in/caio-carvalho-326269358/" id="linkedin" class="contato-link"
-                    target="_blank">Linkedin <i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/caiocarvalho14" id="github" class="contato-link" target="_blank">Github <i
-                        class="fab fa-github"></i></a>
-                <a href="mailto:caioscphb@gmail.com" class="contato-link">Email <i class="fas fa-envelope"></i></a>
-                <a href="https://www.instagram.com/caio.carvalho9/" id="instagram" class="contato-link"
-                    target="_blank">Instagram <i class="fab fa-instagram"></i></a>
-            </div>
-            <form action="https://formsubmit.co/caioscphb@gmail.com" method="POST">
-                <h1>Fale comigo!</h1>
-                <input name="Nome" type="text" placeholder="Insira seu nome" required>
-                <input type="email" placeholder="Insira seu email" required>
-                <textarea name="mensagem" id="" placeholder="Insira sua mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-                <input type="hidden" name="_autoresponse"
-                    value="Obrigado pela sua mensagem! Em breve estarei respondendo.">
-                <input type="hidden" name="_next" value="https://caiocarvalho.dev.br/obrigado">
-                <input type="hidden" name="_captcha" value="false">
-            </form>
-        </div>
-        <footer>
-            <p class="light-font">© 2025 Caio Carvalho. Todos os direitos reservados.</p>
-        </footer>
+
+    <div class="t1" id="projetos"></div>
+    <div class="page-m">
 
     </div>
 
+    <div class="t2" id="contato"></div>
+    <div class="page gray">
+        <div class="title p-4">
+            <h1>Vamos trabalhar juntos?</h1>
+            <p>Estou sempre aberto a novas oportunidades e projetos interessantes. Entre em contato para conversarmos!
+            </p>
+        </div>
+    </div>
 
-    <!-- MODALS -->
-    <!-- Main modal -->
-    <div id="landing" tabindex="-1" aria-hidden="true"
-        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full modal-f max-h-full">
-            <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow-sm ">
-                <!-- Modal header -->
-                <div
-                    class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                        Landing Page Comercial
-                    </h3>
-                    <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                        data-modal-hide="default-modal">
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                        </svg>
-                        <span class="sr-only">Close modal</span>
-                    </button>
-                </div>
-                <!-- Modal body -->
-                <div class="p-4 text-justify md:p-5 space-y-4">
-                    <img src="/gifs/ladingpage.gif" alt="" class="modal-video">
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        Landing page criada com Bootstrap<i class="devicon-bootstrap-plain colored"></i>, com design
-                        responsivo e seções estratégicas para
-                        apresentar produtos ou serviços. A interação com o cliente é facilitada por botões que
-                        redirecionam diretamente para o WhatsApp do vendedor, permitindo atendimento rápido e
-                        personalizado. O projeto combina estética moderna com funcionalidade prática, garantindo
-                        uma experiência fluida em diferentes dispositivos.
-                    </p>
-                </div>
-                <!-- Modal footer -->
-                <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                    <button data-modal-hide="landing" type="button"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Entendi</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END MODAL -->
-    <!-- Main modal -->
-    <div id="ecommerce" tabindex="-1" aria-hidden="true"
-        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full modal-f max-h-full">
-            <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow-sm ">
-                <!-- Modal header -->
-                <div
-                    class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                        Ecommerce de doceria
-                    </h3>
-                    <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                        data-modal-hide="default-modal">
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                        </svg>
-                        <span class="sr-only">Close modal</span>
-                    </button>
-                </div>
-                <!-- Modal body -->
-                <div class="p-4 md:p-5 text-justify  space-y-4">
-                    <img src="/gifs/ecommerce.gif" alt="" class="modal-video">
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        E-commerce funcional para uma doceria, desenvolvido com Bootstrap CSS<i
-                            class="devicon-bootstrap-plain colored"></i> para garantir um layout moderno e responsivo.
-                        Conta com catálogo de produtos, carrinho de compras e cálculo automático do total. A finalização
-                        é feita por meio de integração com o WhatsApp, onde uma mensagem automatizada é gerada via
-                        JavaScript<i class="devicon-javascript-plain colored"></i> e enviada diretamente ao responsável,
-                        garantindo praticidade e agilidade no atendimento.
-                    </p>
-                </div>
-                <!-- Modal footer -->
-                <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                    <button data-modal-hide="ecommerce" type="button"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Entendi</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END MODAL -->
-    <!-- Main modal -->
-    <div id="estagios" tabindex="-1" aria-hidden="true"
-        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full modal-f max-h-full">
-            <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow-sm ">
-                <!-- Modal header -->
-                <div
-                    class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                        Sistema de gestão de estágios
-                    </h3>
-                    <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                        data-modal-hide="default-modal">
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                        </svg>
-                        <span class="sr-only">Close modal</span>
-                    </button>
-                </div>
-                <!-- Modal body -->
-                <div class="p-4 md:p-5 text-justify  space-y-4">
-                    <img src="/gifs/estagio.gif" alt="" class="modal-video">
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        EstagioS é um sistema de gerenciamento de estágios voltado para a escala de jovens aprendizes,
-                        com diversas funcionalidades para a gestão de alunos, empresas e processos administrativos. Foi
-                        desenvolvido durante a formação no curso técnico de Desenvolvimento Web do SENAI, utilizando
-                        Django<i class="devicon-django-plain colored"></i> no backend, PostgreSQL<i
-                            class="devicon-postgresql-plain colored"></i> como banco de dados e Tailwind CSS<i
-                            class="devicon-tailwindcss-original colored"></i> para a interface, garantindo robustez,
-                        organização e uma experiência moderna e responsiva.
-                    </p>
-                </div>
-                <!-- Modal footer -->
-                <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                    <button data-modal-hide="estagios" type="button"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Entendi</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END MODAL -->
-    <button id="btnTopo"><i class='fas fa-angle-up'></i></button>
-    
+    <button id="btnTopo" style="display: block;"><i class="bi bi-caret-up-fill"></i></button>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-
-<script src="/static/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="static/js/app.js"></script>
+<script>
+    
+</script>
 
 </html>

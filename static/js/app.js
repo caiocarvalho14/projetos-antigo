@@ -1,43 +1,5 @@
-document.getElementById('sobre-link').addEventListener('click', () => {
-    document.getElementById('sobre').scrollIntoView({ behavior: 'smooth' })
-})
-
-document.getElementById('habilidades-link').addEventListener('click', () => {
-    document.getElementById('habilidades').scrollIntoView({ behavior: 'smooth' })
-})
-
-document.getElementById('projetos-link').addEventListener('click', () => {
-    document.getElementById('projetos').scrollIntoView({ behavior: 'smooth' })
-})
-
-document.getElementById('contato-link').addEventListener('click', () => {
-    document.getElementById('contato').scrollIntoView({ behavior: 'smooth' })
-})
-
-// Seleciona o botão principal que controla o menu (o "hambúrguer")
-const toggleButton = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
-
-// Seleciona o próprio menu, para podermos verificar sua visibilidade de outra forma se necessário
-const navbar = document.getElementById('navbar-sticky');
-
-// Seleciona TODOS os links dentro do menu de navegação
-const navLinks = navbar.querySelectorAll('li');
-
-// Itera sobre cada link para adicionar um "ouvinte" de clique
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-    
-        const isMenuOpen = toggleButton.getAttribute('aria-expanded') === 'true';
-
-        // Se (e somente se) o menu estiver aberto, simula um clique no botão para fechá-lo.
-        if (isMenuOpen) {
-            toggleButton.click();
-        }
-    });
-});
-// 
 const elementoNome = document.querySelector('#nome');
-const textoParaEscrever = " Caio Carvalho.";
+const textoParaEscrever = " Caio Carvalho";
 // 
 
 

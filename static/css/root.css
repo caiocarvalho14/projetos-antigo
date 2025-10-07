@@ -1,0 +1,245 @@
+:root {
+    /* Mapeado para o fundo principal. O cinza escuro foi trocado por um azul-marinho profissional. */
+    --dark-blue: #0a192f;
+
+    /* Mapeado para elementos secundários. O cinza claro foi trocado por um azul mais suave para criar profundidade. */
+    --light-blue: rgba(25, 36, 56, 0.712);
+
+    /* Gradiente escuro atualizado com as novas cores de base. */
+    --gradient-blue-dark: linear-gradient(to bottom, var(--light-blue), var(--dark-blue));
+
+    /* Gradiente claro atualizado para ser um destaque vibrante e moderno. */
+    --gradient-light: linear-gradient(135deg, #64ffda, #112240);
+
+
+    /* === CORES ADICIONAIS RECOMENDADAS === */
+    /* Sua paleta original não tinha cores para texto ou um destaque único. */
+    /* Recomendo fortemente adicionar estas variáveis para um design completo. */
+
+    --text-primary: #ccd6f6;
+    /* Para títulos e textos principais */
+    --text-secondary: #8892b0;
+    /* Para parágrafos e textos de apoio */
+    --accent: #64ffda;
+    /* Cor de destaque para links e botões */
+    --gray: #E2E8F0;
+    --bg-img: #ccd6f652;
+}
+
+*::selection {
+    color: var(--text-primary);
+    background-color: var(--dark-blue);
+}
+
+
+
+.title {
+
+    padding-top: 10px;
+    text-align: center;
+    width: 100vw;
+
+
+    h2 {
+        color: var(--light-blue);
+        font-size: 20px;
+
+        @media (max-width:1024px) {
+            font-size: 10px;
+        }
+    }
+}
+
+body {
+    color: var(--dark-blue);
+}
+
+a {
+    color: var(--light-blue) !important;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.637);
+    backdrop-filter: blur(2px);
+}
+
+.page {
+    height: calc(100dvh - 56px);
+    width: 100%;
+}
+
+.page-m {
+    min-height: calc(100dvh - 56px);
+    width: 100%;
+}
+
+#home {
+    margin-top: 56px;
+}
+
+.hero {
+    height: 80%;
+
+    img {
+        border-radius: 100%;
+        width: 230px;
+        object-fit: cover;
+        border: solid 4px var(--dark-blue);
+    }
+
+    /* Animação do cursor piscando */
+
+
+    #nome {
+        border-right: 5px solid var(--dark-blue);
+        animation: blink-caret .75s step-end infinite;
+        white-space: nowrap;
+    }
+
+    @media (max-width:1024px) {
+        div {
+            order: 2;
+        }
+    }
+
+    h3,
+    p {
+        color: var(--light-blue);
+    }
+
+    ul {
+        padding-left: 0;
+
+        li {
+            cursor: pointer;
+            color: var(--light-blue);
+            min-width: 10px;
+            padding: 4px;
+            list-style: none;
+            border-radius: 10%;
+            outline: solid 1px var(--light-blue);
+        }
+    }
+}
+
+.gray {
+    background-color: var(--gray);
+}
+
+#btnTopo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background-color: var(--accent);
+    color: var(--dark-blue);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+}
+
+.t1 {
+    width: 100%;
+    height: 56px;
+    background-color: var(--gray);
+    clip-path: ellipse(60% 100% at 50% 0%);
+}
+
+.t2 {
+    width: 100%;
+    height: 56px;
+    background: var(--gray);
+    clip-path: ellipse(60% 100% at 50% 100%);
+}
+
+.about {
+    @media (max-width:1024px) {
+        height: 80%;
+    }
+
+
+
+    img {
+        width: 350px;
+        border-radius: 10%;
+        object-fit: cover;
+        border: solid 2px var(--dark-blue);
+
+        @media (max-width:1024px) {
+            display: none;
+        }
+    }
+
+    p {
+        font-size: 20px;
+        color: var(--light-blue);
+
+        @media (max-width:1024px) {
+
+            font-size: 80%;
+
+        }
+    }
+
+    div {
+        width: 40%;
+
+        @media (max-width:1024px) {
+
+            width: 80%;
+            height: 60%;
+        }
+    }
+
+    .topcs {
+        width: 100%;
+
+
+
+        div {
+            width: 50%;
+
+            h1 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width:1024px) {
+            height: 50px;
+            width: 100%;
+
+            div {
+                width: 50%;
+
+                h1 {
+                    font-size: 15px;
+                }
+
+                p {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+}
+
+.about-topics {
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 10px;
+    outline: solid 1px var(--dark-blue);
+    outline-offset: -3px;
+
+    .btn {
+        background: var(--text-primary);
+    }
+}
