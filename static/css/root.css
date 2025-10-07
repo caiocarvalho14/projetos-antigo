@@ -157,13 +157,13 @@ nav {
 
 .about {
     @media (max-width:1024px) {
-        height: 80%;
+        min-height: 80%;
     }
 
 
 
     img {
-        width: 350px;
+        width: 500px;
         border-radius: 10%;
         object-fit: cover;
         border: solid 2px var(--dark-blue);
@@ -179,7 +179,7 @@ nav {
 
         @media (max-width:1024px) {
 
-            font-size: 80%;
+            font-size: 100%;
 
         }
     }
@@ -190,17 +190,16 @@ nav {
         @media (max-width:1024px) {
 
             width: 80%;
-            height: 60%;
+            min-height: 60%;
         }
     }
 
     .topcs {
         width: 100%;
 
-
-
         div {
             width: 50%;
+            height: 100%;
 
             h1 {
                 font-size: 25px;
@@ -212,7 +211,6 @@ nav {
         }
 
         @media (max-width:1024px) {
-            height: 50px;
             width: 100%;
 
             div {
@@ -223,7 +221,7 @@ nav {
                 }
 
                 p {
-                    font-size: 10px;
+                    font-size: 15px;
                 }
             }
         }
