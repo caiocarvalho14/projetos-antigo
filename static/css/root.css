@@ -55,6 +55,7 @@
 }
 
 body {
+    overflow-x: hidden;
     color: var(--dark-blue);
 }
 
