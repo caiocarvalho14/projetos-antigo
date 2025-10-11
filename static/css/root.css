@@ -37,12 +37,17 @@
     border-bottom: solid 1px var(--dark-blue);
 }
 
-.accordion-button:not(.collapsed){
+.accordion-button:not(.collapsed) {
     background-color: white;
     color: var(--dark-blue);
-    button:after{
+
+    button:after {
         color: white !important;
     }
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
 }
 
 .title {
@@ -62,6 +67,43 @@
     }
 }
 
+.links-hero ul {
+    padding-left: 0;
+
+    li {
+        cursor: pointer;
+        color: var(--light-blue);
+        min-width: 10px;
+        padding: 4px;
+        list-style: none;
+        border-radius: 10%;
+        outline: solid 1px var(--light-blue);
+    }
+
+    li:hover {
+        outline-color: var(--dark-blue);
+        color: var(--dark-blue);
+    }
+}
+
+.links-footer ul {
+    padding-left: 0;
+
+    li {
+        cursor: pointer;
+        color: var(--light-blue);
+        min-width: 10px;
+        padding: 4px;
+        list-style: none;
+        border-radius: 10%;
+    }
+
+    li:hover {
+        outline-color: var(--dark-blue);
+        color: var(--dark-blue);
+    }
+}
+
 body {
     overflow-x: hidden;
     color: var(--dark-blue);
@@ -74,11 +116,13 @@ a {
 nav {
     background-color: rgba(255, 255, 255, 0.637);
     backdrop-filter: blur(2px);
+    padding-bottom: 0 !important;
 }
 
 .page {
     min-height: calc(100dvh - 56px);
     width: 100%;
+    border-bottom: solid 1px var(--gray);
 }
 
 
@@ -115,19 +159,7 @@ nav {
         color: var(--light-blue);
     }
 
-    ul {
-        padding-left: 0;
 
-        li {
-            cursor: pointer;
-            color: var(--light-blue);
-            min-width: 10px;
-            padding: 4px;
-            list-style: none;
-            border-radius: 10%;
-            outline: solid 1px var(--light-blue);
-        }
-    }
 
     @media (max-width:1024px) {
 
@@ -135,9 +167,7 @@ nav {
     }
 }
 
-.gray {
-    background-color: var(--gray);
-}
+.gray {}
 
 #btnTopo {
     position: fixed;
@@ -156,34 +186,37 @@ nav {
 
 .t1 {
     width: 100%;
-    height: 67px;
-    background-color: var(--gray);
-    clip-path: ellipse(60% 100% at 50% 0%);
+    height: 59px;
+    /* background-color: var(--gray); */
 }
 
 .t2 {
     width: 100%;
-    height: 67px;
-    background: var(--gray);
+    height: 59px;
+    /* background: var(--gray); */
     clip-path: ellipse(60% 100% at 50% 100%);
 }
 
 .about-topics {
     padding: 15px 20px;
     border-radius: 10px;
-    background-color: white;
     margin-bottom: 10px;
-    h1{
+
+    h1 {
         font-size: 30px;
     }
-    p{
+
+    p {
+        text-align: justify;
         width: 99%;
     }
+
     .btn {
         background: var(--text-primary);
     }
 }
-.about-img{
+
+.about-img {
     width: 80%;
     border-radius: 5%;
     border: white solid 2px;

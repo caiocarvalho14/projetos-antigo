@@ -44,6 +44,7 @@
                             <a class="nav-link" href="#contato">Contato</a>
                         </li>
                     </ul>
+
                 </div>
             </div>
             <div id="bar"> </div>
@@ -400,12 +401,55 @@
             </p>
         </div>
 
-        <div class="d-flex w-100 h-100 align-items-center justify-content-center">
-            <h1>Portfólio em construção <i class="bi bi-tools"></i></h1>
+        <div class="container text-start">
+            <div class="row">
+
+                <div class="col-xl-6 mx-auto">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nomeForm" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nomeForm" placeholder="Seu Nome Completo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailForm" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="emailForm" placeholder="email@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="assuntoForm" class="form-label">Assunto</label>
+                            <textarea class="form-control" id="assuntoForm" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+
+            </div>
         </div>
+
     </div>
 
-    <button id="btnTopo" style="display: block;"><i class="bi bi-caret-up-fill"></i></button>
+    <footer class="text-center p-2">
+        Caio Carvalho © 2025. Todos os direitos reservados.
+        <div class="links-footer ">
+            <ul class="d-flex gap-2 align-items-center justify-content-center mt-2">
+                <a href="https://github.com/caiocarvalho14" target="_blank">
+                    <li>
+                        <i class="bi bi-github"></i> caiocarvalho14
+                    </li>
+                </a>
+                <a href="https://www.linkedin.com/in/caio-carvalho-326269358/" target="_blank">
+                    <li>
+                        <i class="bi bi-linkedin"></i> caio-carvalho-326269358
+                    </li>
+                </a>
+                <a href="https://www.instagram.com/caio.carvalho9/" target="_blank">
+                    <li>
+                        <i class="bi bi-instagram"></i> @caio.carvalho9
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </footer>
+    <button id="btnTopo" style="display: none;"><i class="bi bi-caret-up-fill"></i></button>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script src="static/js/app.js"></script>
