@@ -405,20 +405,21 @@
             <div class="row">
 
                 <div class="col-xl-6 mx-auto">
-                    <form>
+                    <form action="https://formsubmit.co/k4io12345@gmail.com" method="POST">
                         <div class="mb-3">
                             <label for="nomeForm" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="nomeForm" placeholder="Seu Nome Completo">
+                            <input name="Nome" type="text" class="form-control" id="nomeForm" placeholder="Seu Nome Completo" required>
                         </div>
                         <div class="mb-3">
                             <label for="emailForm" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="emailForm" placeholder="email@example.com">
+                            <input type="email" name="Email" class="form-control" id="emailForm" placeholder="email@example.com" required>
                         </div>
                         <div class="mb-3">
                             <label for="assuntoForm" class="form-label">Assunto</label>
-                            <textarea class="form-control" id="assuntoForm" rows="3"></textarea>
+                            <textarea name="Assunto" class="form-control" id="assuntoForm" rows="3" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar</button>
+                        <input type="hidden" name="_next" value="https://caiocarvalho.dev.br/obrigado">
                     </form>
                 </div>
 
