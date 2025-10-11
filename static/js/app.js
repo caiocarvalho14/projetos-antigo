@@ -54,11 +54,17 @@ btnTopo.addEventListener('click', () => {
 });
 
 window.addEventListener('scroll', () => {
-    const bar = document.getElementById('bar')
-    const scrollTop = window.scrollY; // quanto rolou
-    const windowHeight = window.innerHeight; // altura da janela visível
-    const documentHeight = document.documentElement.scrollHeight; // altura total do documento
-
-    const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
-    bar.style.width=`${scrollPercent}%`
+    const bar = document.getElementById('bar');
+    const footer = document.getElementById('footer');
+    if (!bar || !footer) return;
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const footerTop = footer.getBoundingClientRect().top + scrollTop;
+    const maxScroll = footerTop - windowHeight;
+    let scrollPercent = 0;
+    if (maxScroll > 0) {
+        scrollPercent = (scrollTop / maxScroll) * 100;
+        scrollPercent = Math.min(100, Math.max(0, scrollPercent));
+    }
+    bar.style.width = `${scrollPercent}%`;
 });
